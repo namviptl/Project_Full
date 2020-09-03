@@ -123,6 +123,16 @@
                     $pro = new Pro_c();
                     $pro->product();
                     break;
+                case 'blog':
+                    include_once 'controller/Blog_c.php';
+                    $Blog = new Blog_c();
+                    $Blog->blog();
+                    break;
+                case 'blog-detail':
+                    include_once 'controller/Blog_c.php';
+                    $Blog = new Blog_c();
+                    $Blog->blog();
+                    break;
                 
                 default:
                     include_once 'layout/banner.php';

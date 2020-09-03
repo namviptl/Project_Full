@@ -22,8 +22,8 @@
           <a href="index.php?page=vans">Vans</a>
         </li>
 
-        <li class="menu-item menu-item-has-children dropdown">
-          <a href="DataLayout/blog.php">Blog</a>
+        <li class="menu-item">
+          <a href="index.php?page=blog">Blog</a>
         </li>
       </ul>
     </div>

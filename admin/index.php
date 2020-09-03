@@ -40,6 +40,11 @@
                 $cate = new Cate_c();
                 $cate->cate();
                 break;
+              case 'list-blog':
+                include_once 'controller/Blog_c.php';
+                $blog = new Blog_c();
+                $blog->product();
+                break;
               case 'list-account':
                 include_once 'controller/Account_c.php';
                 $acc = new Account_c();

@@ -55,6 +55,13 @@
               <li><a href="index.php?page=list-order&method=list">Danh sách đơn hàng</a></li>
             </ul>
           </li>
+
+          <li><a><i class="fa fa-edit"></i> Quản lý bài viết <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="index.php?page=list-blog&method=list">Danh sách bài viết</a></li>
+                    <li><a href="index.php?page=list-blog&method=add">Thêm bài viết</a></li>
+                </ul>
+            </li>
           
         </ul>
       </div>
