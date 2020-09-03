@@ -4,7 +4,19 @@
 <div class="ps-section--features-product ps-section masonry-root pt-50 pb-80">
   <div class="ps-container">
   <div class="ps-section__header mb-50">
-    <h3 class="ps-section__title" data-mask="ADIDAS" style="font-size: 40px; color: #2AC37D;">- ADIDAS</h3>
+    <h3 class="ps-section__title" data-mask="NIKE" style="font-size: 40px; color: #2AC37D;">- NIKE</h3>
+  </div>
+
+  <div class="ps-product-action">
+      <div class="ps-product__filter">
+          <select class="ps-select selectpicker" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+              <option value="default">SẮP XẾP THEO</option>
+              <option value="index.php?page=nike&method=desc3">SẢN PHẨM MỚI</option>
+              <option value="index.php?page=nike&method=asc3">SẢN PHẨM CŨ</option>
+              <option value="index.php?page=nike&method=price_desc3">GÍA GIẢM DẦN</option>
+              <option value="index.php?page=nike&method=price_asc3">GÍA TĂNG DẦN</option>
+          </select>
+      </div>
   </div>
 
   <div class="ps-section__content pb-50">

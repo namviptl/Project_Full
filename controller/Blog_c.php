@@ -32,11 +32,11 @@ class Blog_c extends Blog_m
                 }else{
                     $rs_blog = $this->blog->getBlog();
                 }
-                include_once 'views/Blog/blog-detail.php';
+                include_once 'views/blog-detail.php';
                 break;
             default:
                 $rs_blog = $this->blog->getBlog();
-                include_once 'views/Blog/blog.php';
+                include_once 'views/blog.php';
                 break;
         }
     }

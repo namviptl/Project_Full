@@ -1,46 +1,32 @@
-<div class="ps-footer bg--cover" data-background="../publics/images/background/parallax.jpg">
+<div class="ps-footer bg--cover" data-background="publics/images/background/parallax.jpg">
   <div class="ps-footer__content">
     <div class="ps-container">
       <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
           <aside class="ps-widget--footer ps-widget--info">
-            <header><a class="ps-logo" href="index.php"><h1 class="logo-ntn" style="font-size: 42px;position: relative;top: 0;right: 0;">N T N</h1></a>
-              <h3 class="ps-widget__title">Địa chỉ</h3>
+            <header><a class="ps-logo" href="index.php"><img src="publics/images/logo-white.png" alt=""></a>
+              <h3 class="ps-widget__title">Địa chỉ cơ sở 1</h3>
             </header>
             <footer>
-              <p><strong>Số 1, Đường Lĩnh Nam, Hoàng Mai, Hà Nội</strong></p>
-              <p>Email: <a>ntnstore@gmail.com</a></p>
-              <p>Số điện thoại: 0347173650</p>
+              <p><strong>276 Đại Từ, Hoàng Mai, Hà Nội, Việt Nam</strong></p>
+              <p>Email: <a href='mailto:namdaitu1@gmail.com'>support@ntn.com</a></p>
+              <p>Phone: +036 360 3868</p>
+              <p>Fax: ++036 360 3868</p>
             </footer>
           </aside>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-          <!-- <aside class="ps-widget--footer ps-widget--info second">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+          <aside class="ps-widget--footer ps-widget--info second">
             <header>
-              <h3 class="ps-widget__title">Address Office 2</h3>
+              <h3 class="ps-widget__title">Địa chỉ cơ sở 2</h3>
             </header>
             <footer>
-              <p><strong>PO Box 16122 Collins  Victoria 3000 Australia</strong></p>
-              <p>Email: <a href='mailto:support@store.com'>support@store.com</a></p>
-              <p>Phone: +323 32434 5334</p>
-              <p>Fax: ++323 32434 5333</p>
+              <p><strong>325 Kim Ngưu, Hai Bà Trưng, Hà Nội, Việt Nam</strong></p>
+              <p>Email: <a href='mailto:tranu01121999@gmail.com'>support@ntn.com</a></p>
+              <p>Phone: +034 717 3650</p>
+              <p>Fax: ++034 717 3650</p>
             </footer>
-          </aside> -->
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 ">
-          <!-- <aside class="ps-widget--footer ps-widget--link">
-            <header>
-              <h3 class="ps-widget__title">Find Our store</h3>
-            </header>
-            <footer>
-              <ul class="ps-list--link">
-                <li><a href="#">Coupon Code</a></li>
-                <li><a href="#">SignUp For Email</a></li>
-                <li><a href="#">Site Feedback</a></li>
-                <li><a href="#">Careers</a></li>
-              </ul>
-            </footer>
-          </aside> -->
+          </aside>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 ">
           <aside class="ps-widget--footer ps-widget--link">

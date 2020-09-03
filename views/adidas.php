@@ -7,6 +7,18 @@
     <h3 class="ps-section__title" data-mask="ADIDAS" style="font-size: 40px; color: #2AC37D;">- ADIDAS</h3>
   </div>
 
+  <div class="ps-product-action">
+      <div class="ps-product__filter">
+          <select class="ps-select selectpicker" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+              <option value="default">SẮP XẾP THEO</option>
+              <option value="index.php?page=adidas&method=desc2">SẢN PHẨM MỚI</option>
+              <option value="index.php?page=adidas&method=asc2">SẢN PHẨM CŨ</option>
+              <option value="index.php?page=adidas&method=price_desc2">GÍA GIẢM DẦN</option>
+              <option value="index.php?page=adidas&method=price_asc2">GÍA TĂNG DẦN</option>
+          </select>
+      </div>
+  </div>
+
   <div class="ps-section__content pb-50">
     <div class="masonry-wrapper" data-col-md="4" data-col-sm="2" data-col-xs="1" data-gap="30" data-radio="100%">
 

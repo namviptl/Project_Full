@@ -1,7 +1,7 @@
 <nav class="navigation">
   <div class="container-fluid">
-    <div class="navigation__column left" style="height: 90px;">
-      <div class="header__logo"><a class="ps-logo" href="index.php"><h1 class="logo-ntn">N T N</h1></a></div>
+    <div class="navigation__column left">
+      <div class="header__logo"><a class="ps-logo" href="index.php"><img src="publics/images/logo.png" alt=""></a></div>
     </div>
 
     <div class="navigation__column center">
@@ -10,7 +10,7 @@
           <a href="index.php">Trang chủ</a>
         </li>
 
-        <li class="menu-item menu-item-has-children has-mega-menu">
+        <li class="menu-item">
           <a href="index.php?page=adidas">Adidas</a>
         </li>
 
@@ -30,11 +30,10 @@
 
     <div class="navigation__column right">
       <!-- form tìm kiếm -->
-      <form action="index.php?page=search-product" method="post">
-        <input class="search" name="keys" class="form-control" type="text" placeholder="Tìm kiếm sản phẩm">
-        <button class="icon_sr" type="submit" name="sb_search"><i class="ps-icon-search"></i></button>
+      <form class="ps-search--header" action="index.php?page=search-product" method="post">
+        <input name="keys" class="form-control" type="text" placeholder="Tìm kiếm sản phẩm">
+        <button type="submit" name="sb_search"><i class="ps-icon-search"></i></button>
       </form>
-      
       <!-- bắt đầu giỏ hàng -->
       <?php 
           if (!isset($_SESSION['cart'])) {

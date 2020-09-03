@@ -144,15 +144,15 @@
 
 <!-- banner ở giữa -->
 <div class="ps-section--offer">
-  <div class="ps-column"><a class="ps-offer" href="product-listing.html"><img src="admin/images/banner/home-banner-1.png" alt=""></a></div>
-  <div class="ps-column"><a class="ps-offer" href="product-listing.html"><img src="admin/images/banner/home-banner-2.png" alt=""></a></div>
+  <div class="ps-column"><a class="ps-offer" href="index.php"><img src="admin/images/banner/home-banner-1.png" alt=""></a></div>
+  <div class="ps-column"><a class="ps-offer" href="index.php"><img src="admin/images/banner/home-banner-2.png" alt=""></a></div>
 </div>
 
 <!-- top sales -->
 <div class="ps-section--features-product ps-section masonry-root pt-50 pb-80">
   <div class="ps-container">
     <div class="ps-section__header mb-50">
-      <h3 class="ps-section__title" data-mask="SALE" style="font-size: 40px; color: #2AC37D;">Sale</h3>
+      <h3 class="ps-section__title" data-mask="TOP SALE" style="font-size: 40px; color: #2AC37D;">- SẢN PHẨM GIẢM GIÁ</h3>
       <ul class="ps-masonry__filter">
         <?php 
           $qty = 0;

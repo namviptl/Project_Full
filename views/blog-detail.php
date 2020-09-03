@@ -119,7 +119,7 @@
                       foreach ($rs_blog as $key => $value) {
                       ?>
                       <div class="ps-post mb-10">
-                          <div class="ps-post__thumbnail"><img style="width: 400px; height: 200px;" src="publics/images/blog/<?php echo $value['post_avatar'] ?>" alt=""><a class="ps-post__overlay" href="index.php?page=blog-detail&id=<?php echo $value['id_post'] ?>"></a></div>
+                          <div class="ps-post__thumbnail"><img style="width: 400px; height: 200px;" src="admin/images/blog/<?php echo $value['post_avatar'] ?>" alt=""><a class="ps-post__overlay" href="index.php?page=blog-detail&id=<?php echo $value['id_post'] ?>"></a></div>
                           <div class="ps-post__content"><a class="ps-post__title" href="index.php?page=blog-detail&id=<?php echo $value['id_post'] ?>"><?php echo $value['post_name'] ?></a>
                               <p class="ps-post__meta"><i class="fa fa-clock-o"></i> -<span class="ml-5"><?php echo $value['dateTime'] ?></span></p>
                           </div>

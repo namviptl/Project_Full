@@ -113,8 +113,9 @@
   </div>
 </div>
 <?php
-}?>
-<?php if (count($rs_pro) > 0) {
+}
+?>
+<!-- <?php if (count($rs_pro) > 0) {
 ?>
 <div class="ps-product-action">
   <div class="ps-pagination">
@@ -150,5 +151,5 @@
   </div>
 </div>
 <?php
-} ?>
+} ?> -->
 

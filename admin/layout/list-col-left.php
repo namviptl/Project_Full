@@ -1,6 +1,6 @@
 <div class="left_col scroll-view">
     <div class="navbar nav_title" style="border: 0;">
-      <a href="index.php" class="site_title"><img style="width: 45px; height: 45px;" src="images/shoes-ic.png"> <span>SHOP SHOES</span></a>
+      <a href="index.php" class="site_title"><img style="width: 45px; height: 45px;" src="https://cdn.iconscout.com/icon/free/png-256/shoes-97-160935.png"> <span>SHOP SHOES</span></a>
     </div>
 
     <div class="clearfix"></div>

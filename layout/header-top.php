@@ -19,7 +19,7 @@
           <?php
             }else{
           ?>
-            <a href="index.php?page=login">Đăng Nhập</a>
+            <a href="index.php?page=login">Tài Khoản <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
           <?php   
             }
            ?>

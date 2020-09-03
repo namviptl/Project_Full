@@ -12,7 +12,6 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="https://cdn.iconscout.com/icon/free/png-256/shoes-97-160935.png" rel="icon">
-    <meta name="author" content="Nghia Minh Luong">
     <meta name="keywords" content="Default Description">
     <meta name="description" content="Default keyword">
     <title>NTN STORE</title>

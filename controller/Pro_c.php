@@ -440,7 +440,6 @@
 						}
 					}
 					break;
-
 				case 'del-cart':
 					//Xóa sản phẩm khỏi giỏ hàng
 					$id = $_POST['id'];
@@ -608,7 +607,7 @@
 				case 'search-product':
 					if (isset($_POST['sb_search'])) {
 						$keys = '%'.$_POST['keys'].'%';
-						$row = 8; // số tin một trang
+						$row = 16; // số tin một trang
 						$number = count($this->pro->getNumber()); // Tổng số bản ghi
 						$pagination = ceil($number/$row);
 						
@@ -621,24 +620,10 @@
 						$rs_pro = $this->pro->searchPro($keys, $from, $row);
 						$count = count($rs_pro);		
 					}
-					if (isset($_GET['pages'])) {
-						$row = 8; // số tin một trang
-						$number = count($this->pro->getNumber()); // Tổng số bản ghi
-						$pagination = ceil($number/$row);
-						
-						if (isset($_GET['pages'])) {
-							$pages = $_GET['pages'];
-						}else{
-							$pages = 1;
-						}	
-						$from = ($pages - 1) * $row;
-						$rs_pro = $this->pro->pages($from, $row);
-						$count = count($rs_pro);
-					}
 					include_once 'views/search-product.php';
 					break;
 				case 'adidas':
-					$row = 16; // số tin một trang
+					$row = 8; // số tin một trang
 					$adidas = 'ADIDAS';
 					$number = count($this->pro->getNumberCate($adidas)); // Tổng số bản ghi
 					$pagination = ceil($number/$row);
@@ -655,7 +640,7 @@
 					include_once 'views/adidas.php';
 					break;
 				case 'nike':
-					$row = 16; // số tin một trang
+					$row = 8; // số tin một trang
 					$nike = 'NIKE';
 					$number = count($this->pro->getNumberCate($nike)); // Tổng số bản ghi
 					$pagination = ceil($number/$row);
@@ -672,7 +657,7 @@
 					include_once 'views/nike.php';
 					break;
 				case 'vans':
-					$row = 16; // số tin một trang
+					$row = 8; // số tin một trang
 					$vans = 'VANS';
 					$number = count($this->pro->getNumberCate($vans)); // Tổng số bản ghi
 					$pagination = ceil($number/$row);

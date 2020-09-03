@@ -7,7 +7,7 @@
               ?>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
                   <div class="ps-post mb-30">
-                    <div class="ps-post__thumbnail"><img style="width: 450px; height: 300px;" src="publics/images/blog/<?php echo $value['post_avatar'] ?>" alt=""><a class="ps-post__overlay" href="index.php?page=blog-detail&id=<?php echo $value['id_post'] ?>"></a></div>
+                    <div class="ps-post__thumbnail"><img style="width: 450px; height: 300px;" src="admin/images/blog/<?php echo $value['post_avatar'] ?>" alt=""><a class="ps-post__overlay" href="index.php?page=blog-detail&id=<?php echo $value['id_post'] ?>"></a></div>
                     <div class="ps-post__content"><a class="ps-post__title" href="index.php?page=blog-detail&id=<?php echo $value['id_post'] ?>"><?php echo $value['post_name'] ?></a>
                       <p class="ps-post__meta"><i class="fa fa-clock-o"></i> -<span class="ml-5"><?php echo $value['dateTime'] ?></span></p>
                       <p><?php echo $value['description'] ?>…</p><a class="ps-morelink" href="index.php?page=blog-detail&id=<?php echo $value['id_post'] ?>">Chi tiết bài viết<i class="fa fa-long-arrow-right"></i></a>
