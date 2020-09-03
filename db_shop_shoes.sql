@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 03, 2020 at 01:37 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.31
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th9 03, 2020 lúc 01:55 PM
+-- Phiên bản máy phục vụ: 10.4.11-MariaDB
+-- Phiên bản PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_shop_shoes`
+-- Cơ sở dữ liệu: `db_shop_shoes`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_account`
+-- Cấu trúc bảng cho bảng `tbl_account`
 --
 
 CREATE TABLE `tbl_account` (
@@ -42,7 +42,7 @@ CREATE TABLE `tbl_account` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_account`
+-- Đang đổ dữ liệu cho bảng `tbl_account`
 --
 
 INSERT INTO `tbl_account` (`id_account`, `display_name`, `user_name`, `password`, `phone`, `email`, `addres`, `type`, `status`, `points`, `img_avarta`) VALUES
@@ -59,7 +59,33 @@ INSERT INTO `tbl_account` (`id_account`, `display_name`, `user_name`, `password`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_category`
+-- Cấu trúc bảng cho bảng `tbl_blog`
+--
+
+CREATE TABLE `tbl_blog` (
+  `id_post` int(11) NOT NULL,
+  `post_avatar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `post_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dateTime` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_blog`
+--
+
+INSERT INTO `tbl_blog` (`id_post`, `post_avatar`, `post_name`, `description`, `content`, `dateTime`, `created`, `updated`) VALUES
+(1, '1.jpg', 'VỆ SINH GIÀY VANS TRẮNG TINH NHƯ MỚI MUA CHỈ TRONG 4 BƯỚC ĐƠN GIẢN\r\n', 'Một đôi giày Vans trắng là lựa chọn tuyệt vời cho những bộ trang phục dạo phố cuối tuần, nhưng đồng thời đây cũng là đối tượng dễ dàng bị bám bẩn. Làm thế nào để làm sạch đôi giày Vans trắng cho kế hoạch đi chơi tuần này và phải làm thật nhanh để đôi giày', '<p>Một đ&ocirc;i gi&agrave;y&nbsp;<strong>Vans</strong>&nbsp;trắng l&agrave; lựa chọn tuyệt vời cho những bộ trang phục dạo phố cuối tuần, nhưng đồng thời đ&acirc;y cũng l&agrave; đối tượng dễ d&agrave;ng bị b&aacute;m bẩn. L&agrave;m thế n&agrave;o để l&agrave;m sạch đ&ocirc;i gi&agrave;y&nbsp;<strong>Vans&nbsp;</strong>trắng cho kế hoạch đi chơi tuần n&agrave;y? Dưới đ&acirc;y l&agrave; 4 bước cực đơn giản m&agrave; bất kỳ ai cũng c&oacute; thể thực hiện.</p>\r\n\r\n<ol>\r\n	<li><strong>Chuẩn bị nguy&ecirc;n liệu</strong></li>\r\n</ol>\r\n\r\n<p>Để bắt đầu, tất cả những g&igrave; bạn cần l&agrave;:</p>\r\n\r\n<ul>\r\n	<li>2 c&aacute;i b&aacute;t.</li>\r\n	<li>Nước sạch, bột giặt.</li>\r\n	<li>Một c&aacute;i b&agrave;n chải ch&agrave; chắc chắn.</li>\r\n	<li>V&agrave; một chiếc khăn sạch.</li>\r\n</ul>\r\n\r\n<p>Bước 1 trong chuỗi thao t&aacute;c vệ sinh gi&agrave;y&nbsp;<strong>Vans&nbsp;</strong>trắng đ&atilde; ho&agrave;n th&agrave;nh.</p>\r\n\r\n<p><img alt=\"\" src=\"https://bizweb.dktcdn.net/100/140/774/files/white-vans-1.jpg?v=1594969922520\" style=\"height:464px; width:700px\" /></p>\r\n\r\n<ol start=\"2\">\r\n	<li><strong>Trộn nguy&ecirc;n liệu vệ sinh gi&agrave;y</strong></li>\r\n</ol>\r\n\r\n<p>Đầu ti&ecirc;n, h&atilde;y trộn hai cốc nước ấm với &frac14; ch&eacute;n bột giặt.</p>\r\n\r\n<p>Tiếp đến, nh&uacute;ng b&agrave;n chải ch&agrave; v&agrave;o phần dung dịch lỏng đ&atilde; pha, nhẹ nh&agrave;ng ch&agrave; l&ecirc;n bền mặt của gi&agrave;y. Bạn c&oacute; thể sử dụng một chiếc b&agrave;n chải đ&aacute;nh răng cũ để l&agrave;m sạch bề mặt cao su.</p>\r\n\r\n<p>Bạn n&ecirc;n đặt một b&aacute;t nước sạch, ấm kh&aacute;c, qu&aacute; tr&igrave;nh vệ sinh&nbsp;<strong>Vans&nbsp;</strong>trắng sẽ xen kẽ giữa 2 thao t&aacute;c: ch&agrave; tr&ecirc;n gi&agrave;y v&agrave; nhung b&agrave;n chải v&agrave;o nước ấm định kỳ. Việc n&agrave;y sẽ hạn chế t&igrave;nh trạng bụi bẩn lan rộng tr&ecirc;n vải gi&agrave;y.</p>\r\n\r\n<ol start=\"3\">\r\n	<li><strong>Lau sạch gi&agrave;y Vans</strong></li>\r\n</ol>\r\n\r\n<p>Sau khi đ&atilde; được l&agrave;m sạch bằng chiếc b&agrave;n chải, bạn cần thấm ướt chiếc khăn sạch đ&atilde; chuẩn bị trước đ&oacute; v&agrave; lau nhẹ nh&agrave;ng quanh bề mặt gi&agrave;y.</p>\r\n\r\n<p>Một lựa chọn kh&aacute;c cho bạn l&agrave; sử dụng chất tẩy vết bẩn thấm v&agrave;o khăn, lau quanh gi&agrave;y đến khi cảm thấy &ldquo;kh&ocirc;ng thể trắng hơn&rdquo;.</p>\r\n\r\n<p><img alt=\"\" src=\"https://bizweb.dktcdn.net/100/140/774/files/white-vans-3.jpg?v=1594969946994\" style=\"height:600px; width:600px\" /></p>\r\n\r\n<ol start=\"4\">\r\n	<li><strong>Sấy kh&ocirc; gi&agrave;y Vans trắng</strong></li>\r\n</ol>\r\n\r\n<p>Cuối c&ugrave;ng, đ&acirc;y l&agrave; thao t&aacute;c &ldquo;t&ugrave;y chọn&rdquo;: bạn c&oacute; thể thực hiện hoặc kh&ocirc;ng. Tất nhi&ecirc;n, gi&agrave;y vẫn c&oacute; thể kh&ocirc; tự nhi&ecirc;n, nhưng để gi&uacute;p ch&uacute;ng kh&ocirc; nhanh hơn, bạn c&oacute; thể sử dụng m&aacute;y sấy.</p>\r\n\r\n<p>Nếu bạn kh&ocirc;ng c&oacute; thời gian cho việc đợi chờ những đ&ocirc;i gi&agrave;y của m&igrave;nh kh&ocirc; bằng việc sấy kh&ocirc;, việc tận dụng &aacute;nh s&aacute;ng mặt trời cũng l&agrave; một điều đ&aacute;ng để thử. Tuy nhi&ecirc;n &aacute;nh s&aacute;ng mặt trời trực tiếp c&oacute; thể khiến việc ố v&agrave;ng cho đ&ocirc;i gi&agrave;y trở n&ecirc;n dễ d&agrave;ng hơn. V&igrave; vậy khi quyết định d&ugrave;ng &aacute;nh s&aacute;ng cho việc l&agrave;m kh&ocirc; đ&ocirc;i gi&agrave;y, bạn h&atilde;y:</p>\r\n\r\n<ul>\r\n	<li>D&ugrave;ng giấy vệ sinh bọc to&agrave;n bộ đ&ocirc;i gi&agrave;y tạo th&agrave;nh một lớp cản ngăn tia s&aacute;ng trực tiếp đến gi&agrave;y</li>\r\n	<li>Một lưu &yacute; d&agrave;nh cho bạn l&agrave; khi sấy&nbsp;<strong>Vans&nbsp;</strong>sẽ khiến ch&uacute;ng c&oacute; một số biến đổi về h&igrave;nh d&aacute;ng. Do đ&oacute;, bạn n&ecirc;n đặt một miếng giấy b&ocirc;ng b&ecirc;n trong gi&agrave;y để giữ d&aacute;ng của n&oacute;.</li>\r\n</ul>\r\n\r\n<p>Việc vệ sinh một đ&ocirc;i gi&agrave;y&nbsp;<strong>Vans&nbsp;</strong>trắng v&ocirc; c&ugrave;ng dễ d&agrave;ng phải kh&ocirc;ng? Bằng c&aacute;ch n&agrave;y, bạn c&oacute; thể l&agrave;m mới gi&agrave;y bất kỳ l&uacute;c n&agrave;o. Đừng qu&ecirc;n bảo quản để giữ đ&ocirc;i gi&agrave;y&nbsp;<strong>Vans&nbsp;</strong>của bạn bền hơn v&agrave; lu&ocirc;n giữ được sự tinh tươm tươi mới như ng&agrave;y đầu nh&eacute;!</p>\r\n', '18/08/2020', '2020-08-18 14:01:10', '2020-08-31 15:23:41'),
+(9, '2.jpg', 'VÌ SAO GIÀY NIKE AIR FORCE 1 TRẮNG ĐƯỢC CÁC BẠN HỌC SINH LỰA CHỌN', 'Thiết kế gọn gàng, đẹp mắt & cá tính là những đặc tính cơ bản của mẫu giày Nike Air Force 1 Trắng & \"siêu phẩm\" này đang nhận được những phản hồi tích cực từ các tín đồ thời trang. Nếu bạn đam mê loại giày sneaker, yêu thích sự trẻ trung năng động và cá t', '<p>Hiện nay để mua được một đ&ocirc;i gi&agrave;y sneaker đạt đủ 3 ti&ecirc;u ch&iacute;:&nbsp;<strong>rẻ, đẹp v&agrave; chất lượng</strong>&nbsp;th&igrave; v&ocirc; c&ugrave;ng kh&oacute; khăn cho giới trẻ. V&agrave; để đ&aacute;p ứng được nhu cầu đ&oacute; n&ecirc;n thương hiệu&nbsp;<a href=\"https://giaygiare.vn/giay-nike\" rel=\"noopener noreferrer\" target=\"_blank\" title=\"giày Nike\">gi&agrave;y Nike</a>&nbsp;đ&atilde; cho ra đời đ&ocirc;i sneaker Air Force 1 Trắng nhận được rất nhiều sự đ&oacute;n ch&agrave;o của c&aacute;c bạn học sinh. L&yacute; do tại sao m&agrave; đ&ocirc;i gi&agrave;y n&agrave;y lại được y&ecirc;u th&iacute;ch đến thế? H&atilde;y c&ugrave;ng t&igrave;m hiểu nh&eacute;.</p>\r\n\r\n<h2>Một ch&uacute;t th&ocirc;ng tin về Af1 Trắng Full</h2>\r\n\r\n<p><img alt=\"\" src=\"https://product.hstatic.net/200000042104/product/__ci0919-102___nike_air_force_1_shadow__white_magic_flamingo__44b619458adb4aa4a36c6fe197792997_master.jpg\" style=\"height:539px; width:898px\" /></p>\r\n\r\n<p>Sở dĩ đ&ocirc;i gi&agrave;y n&agrave;y được gọi l&agrave; một huyền thoại c&aacute;ch mạng trong giới Sneaker bởi v&igrave; n&oacute; được xem l&agrave; một trong những đ&ocirc;i gi&agrave;y đầu ti&ecirc;n sử dụng c&ocirc;ng nghệ ti&ecirc;n tiến nhất để tăng cường khả năng vận h&agrave;nh trong qu&aacute; tr&igrave;nh sử dụng&nbsp;<a href=\"https://giaygiare.vn/giay-air-force\" rel=\"noopener noreferrer\" target=\"_blank\" title=\"Nike Air Force 1\">Nike Air Force 1</a>.<br />\r\nViệc &aacute;p dụng c&ocirc;ng nghệ cao v&agrave;o qu&aacute; tr&igrave;nh sản xuất đ&ocirc;i gi&agrave;y n&agrave;y bởi v&igrave; mục đ&iacute;ch ban đầu của n&oacute; l&agrave; được chế tạo cho người chơi thể thao, đặc biệt l&agrave; b&oacute;ng rổ. V&agrave; cũng ch&iacute;nh v&igrave; l&yacute; do n&agrave;y m&agrave; n&oacute; được nhiều người trong giới thể thao c&oacute; tầm ảnh hưởng nhất định đặc biệt quan t&acirc;m v&agrave; lan rộng n&oacute; đến to&agrave;n thế giới.</p>\r\n\r\n<h2>Ưu điểm giới trẻ chọn Nike Air Force 1 l&agrave; sự lựa chọn h&agrave;ng đầu</h2>\r\n\r\n<p><img alt=\"\" src=\"https://giaysneaker.com.vn/public/media//thumb/nike-air-force-1-shadow-vien-do3-570x570.jpg\" style=\"height:600px; width:600px\" /></p>\r\n\r\n<h3>Mức gi&aacute; hợp l&yacute;, ph&ugrave; hợp với t&uacute;i tiền</h3>\r\n\r\n<p>Tất nhi&ecirc;n hiện nay học sinh hoặc sinh vi&ecirc;n kh&ocirc;ng thể c&oacute; qu&aacute; nhiều tiền để mua được một đ&ocirc;i gi&agrave;y qu&aacute; mắc cho n&ecirc;n Nike Air Force 1 với mức gi&aacute; trung b&igrave;nh m&agrave; c&ograve;n c&oacute; thể gọi l&agrave; kh&aacute; rẻ so với chất lượng của n&oacute; l&agrave; sự lựa chọn h&agrave;ng đầu.</p>\r\n\r\n<h3>M&agrave;u trắng gi&uacute;p dễ d&agrave;ng mix c&aacute;c bộ trang phục</h3>\r\n\r\n<p>Nếu c&oacute; một m&agrave;u n&agrave;o tr&ecirc;n thế giới c&oacute; thể phối hợp ho&agrave;n hảo với bất cứ một m&agrave;u sắc n&agrave;o kh&aacute;c th&igrave; đ&oacute; ch&iacute;nh l&agrave; m&agrave;u trắng. Ch&iacute;nh v&igrave; vậy ri&ecirc;ng về gi&agrave;y Nike Air Force 1 th&igrave; m&agrave;u trắng lại được rất nhiều bạn trẻ quan t&acirc;m bởi v&igrave; t&iacute;nh khả dụng của n&oacute; trong bất cứ loại trang phục n&agrave;o.</p>\r\n\r\n<p>V&igrave; nếu bạn l&agrave; một học sinh th&igrave; nhiều nh&agrave; trường sẽ c&oacute; quy định bắt buộc phải mang gi&agrave;y m&agrave;u trắng v&agrave; điều đ&oacute; thuận tiện với m&agrave;u sắc của đ&ocirc;i gi&agrave;y n&agrave;y. Bạn ho&agrave;n to&agrave;n c&oacute; thể tự tin diện Nike Air Force ở bất cứ nơi n&agrave;o, bất cứ nơi đ&acirc;u m&agrave; vẫn c&oacute; thể hợp thời trang v&agrave; v&ocirc; c&ugrave;ng thời thượng.</p>\r\n\r\n<p>H&atilde;y thử tưởng tượng bạn c&oacute; thể mix bất cứ loại trang phục từ đơn giản cho đến kh&oacute; nhằn với đ&ocirc;i gi&agrave;y thể thao m&agrave;u trắng n&agrave;y sẽ v&ocirc; c&ugrave;ng đơn giản biết bao.</p>\r\n\r\n<p>Nếu l&agrave; một buổi hẹn h&ograve; th&igrave; chỉ cần một chiếc quần Jean c&ugrave;ng với một đ&ocirc;i gi&agrave;y trắng tinh sẽ gi&uacute;p bạn c&oacute; thể g&acirc;y ấn tượng được với người ấy.<br />\r\nHoặc nếu l&agrave; một buổi tiệc c&ugrave;ng với bạn b&egrave; th&acirc;n thiết th&igrave; mix một chiếc v&aacute;y s&agrave;nh điệu c&ugrave;ng đ&ocirc;i gi&agrave;y Sneaker n&agrave;y c&oacute; thể l&agrave;m bạn trở n&ecirc;n c&aacute; t&iacute;nh nhưng vẫn c&oacute; thể thoải m&aacute;i bay nhảy trong suốt cả một buổi tiệc d&agrave;i.</p>\r\n\r\n<h3>Kh&ocirc;ng dễ bị dơ như những đ&ocirc;i gi&agrave;y trắng kh&aacute;c</h3>\r\n\r\n<p><img alt=\"\" src=\"https://znews-photo.zadn.vn/w660/Uploaded/lqmctqvp/2020_04_07/af5.jpg\" style=\"height:440px; width:660px\" /></p>\r\n\r\n<p>Nếu bạn đang sợ gi&agrave;y&nbsp;<a href=\"https://giaygiare.vn/giay-nike-air-force-1-trang-full-nam-nu.html\" rel=\"noopener noreferrer\" target=\"_blank\" title=\"Air Force 1 trắng\">Air Force 1 trắng</a>&nbsp;c&oacute; thể sẽ dễ bị dơ hoặc bị ố m&agrave;u trong qu&aacute; tr&igrave;nh sử dụng th&igrave; ho&agrave;n to&agrave;n c&oacute; thể y&ecirc;n t&acirc;m th&igrave; đ&ocirc;i gi&agrave;y n&agrave;y được l&agrave;m bằng chất liệu cao cấp c&ugrave;ng m&agrave;u sơn c&oacute; thể khiến t&igrave;nh trạng gi&agrave;y l&uacute;c n&agrave;o cũng tr&ocirc;ng như mới.<br />\r\nNgo&agrave;i ra, nếu bạn lo lắng v&igrave; vấn đề gi&agrave;y trắng c&oacute; thể bị dơ th&igrave; ho&agrave;n to&agrave;n c&oacute; thể mua những dung dịch l&agrave;m sạch chỉ chuy&ecirc;n dụng cho gi&agrave;y thể thao để lau sau mỗi lần sử dụng. Việc n&agrave;y rất đơn giản m&agrave; lại c&oacute; thể gi&uacute;p bảo quản những đ&ocirc;i gi&agrave;y của bạn c&oacute; tuổi thọ l&acirc;u hơn cũng như s&aacute;ng m&agrave;u hơn rất nhiều.</p>\r\n\r\n<h2>Chất lượng l&agrave;m n&ecirc;n thương hiệu</h2>\r\n\r\n<p>Chắc hẳn c&aacute;c bạn sẽ kh&ocirc;ng phải &iacute;t nhất một lần nghe đến c&aacute;i t&ecirc;n Nike trong l&agrave;ng c&aacute;c &ocirc;ng lớn m&aacute;u mặt ở thị trường gi&agrave;y rồi đ&uacute;ng kh&ocirc;ng? Ch&iacute;nh v&igrave; vậy những đ&ocirc;i gi&agrave;y được thương hiệu n&agrave;y thiết kế chắc chắn sẽ rất chất lượng v&agrave; được đầu tư kỹ lưỡng rồi.<br />\r\nCho n&ecirc;n, bạn sẽ kh&ocirc;ng cần qu&aacute; lo lắng khi chọn mua Nike Air Force d&ugrave; nh&igrave;n rất thời trang nhưng lại kh&ocirc;ng hề mau hư hỏng đ&acirc;u nh&eacute;.</p>\r\n\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; một nơi cung cấp những đ&ocirc;i gi&agrave;y từ nhiều thương hiệu lớn, đa dạng mẫu m&atilde; với chất lượng Replica &amp; Super Fake c&ugrave;ng với gi&aacute; cả phải chăng nhất tr&ecirc;n thị trường hiện nay.<br />\r\nH&atilde;y để ch&uacute;ng t&ocirc;i mang lại cho bạn một sản phẩm chất lượng nhất khi chọn mua gi&agrave;y thể thao n&oacute;i chung hoặc Nike Air Force 1 Trắng n&oacute;i ri&ecirc;ng.</p>\r\n', '31/08/2020', '2020-08-31 14:33:00', '2020-09-03 11:50:12'),
+(10, '3.jpg', 'CÁCH LÀM TRẮNG ĐẾ GIÀY BỊ Ố VÀNG CHUẨN CHỈ - 5 CÁCH VỆ SINH AN TOÀN NHẤT', 'Adidas là một trong những hàng thời trang sneaker lớn nhất hiện nay của thế giới vì vậy hãng này luôn nghiên cứu và phát minh những công nghệ mới.. Năm 2014, adidas mang đến cho người dùng một trong những công nghệ tiên tiến lần đầu tiên được áp dụng tron', '<h3>C&aacute;ch 1: D&ugrave;ng kem đ&aacute;nh răng</h3>\r\n\r\n<p>Để thực hiện phương ph&aacute;p n&agrave;y bạn cần kem đ&aacute;nh răng v&agrave; một chiếc b&agrave;n chải. Kem đ&aacute;nh răng th&igrave; nh&agrave; n&agrave;o cũng c&oacute; rồi, đừng n&oacute;i l&agrave; nh&agrave; bạn kh&ocirc;ng c&oacute; nh&eacute;. B&agrave;n chải th&igrave; sử dụng b&agrave;n chải đ&aacute;nh răng l&agrave; tốt nhất v&igrave; độ lớn của n&oacute; cũng vừa bằng độ rộng của đế gi&agrave;y n&ecirc;n rất dễ ch&agrave;. Nếu kh&ocirc;ng c&oacute; c&aacute;i b&agrave;n chải đ&aacute;nh răng cũ n&agrave;o th&igrave; bạn sử dụng b&agrave;n chải b&igrave;nh thường cũng được.</p>\r\n\r\n<p><a href=\"https://bountysneakers.com/wp-content/uploads/2019/10/2.jpg\"><img alt=\"Bàn chải đánh răng và kem đánh răng, hoặc dung dịch vệ sinh giày\" src=\"https://bountysneakers.com/wp-content/uploads/2019/10/2.jpg\" style=\"height:570px; width:760px\" /></a></p>\r\n\r\n<p>B&agrave;n chải đ&aacute;nh răng v&agrave; kem đ&aacute;nh răng, hoặc dung dịch vệ sinh gi&agrave;y</p>\r\n\r\n<p><a href=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach-lam-trang-de-giay-2.jpg\"><img alt=\"cach-lam-trang-de-giay-2\" src=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach-lam-trang-de-giay-2.jpg\" style=\"height:366px; width:650px\" /></a></p>\r\n\r\n<p dir=\"ltr\">Dù tính t&acirc;̉y rửa của kem đánh răng kh&ocirc;ng mạnh nhưng v&acirc;̃n có th&ecirc;̉ t&acirc;̉y đ&ecirc;́ giày màu trắng khi chúng mới bị những v&ecirc;́t b&acirc;̉n đeo bám.</p>\r\n\r\n<ul>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Sau khi làm sạch bùn đ&acirc;́t tr&ecirc;n đ&ecirc;́ giày, bạn thoa trực ti&ecirc;́p kem đánh răng l&ecirc;n đ&ecirc;́ r&ocirc;̀i dùng bàn chải đánh răng đã cũ đ&ecirc;̉ chà mạnh.</strong></p>\r\n	</li>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Thực hi&ecirc;̣n thao tác nhi&ecirc;̀u l&acirc;̀n cho đ&ecirc;́n khi đ&ecirc;́ giày trắng lại như lúc ban đ&acirc;̀u.</strong></p>\r\n	</li>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Bước cu&ocirc;́i cùng bạn xả đ&ecirc;́ giày với nước sạch r&ocirc;̀i đ&ecirc;̉ kh&ocirc; tự nhi&ecirc;n.</strong></p>\r\n	</li>\r\n</ul>\r\n\r\n<p><strong>Lưu &yacute;:</strong>&nbsp;C&aacute;ch tẩy trắng n&agrave;y chỉ n&ecirc;n d&ugrave;ng cho những đ&ocirc;i gi&agrave;y bị ố mới. Với những vết ố l&acirc;u ng&agrave;y th&igrave; kem đ&aacute;nh răng sẽ kh&ocirc;ng c&oacute; t&aacute;c dụng đ&acirc;u. Bởi vậy, nếu gi&agrave;y của bạn đ&atilde; bị ố v&agrave;ng qu&aacute; 3 th&aacute;ng th&igrave; h&atilde;y lựa chọn c&aacute;ch l&agrave;m trắng đế gi&agrave;y kh&aacute;c nh&eacute;.</p>\r\n\r\n<h3>C&aacute;ch 2: D&ugrave;ng chanh tươi</h3>\r\n\r\n<p dir=\"ltr\">Kh&ocirc;ng m&acirc;́y b&acirc;́t ngờ khi chanh tươi lu&ocirc;n có mặt trong danh sách những c&aacute;ch&nbsp;<em>l&agrave;m sạch đế gi&agrave;y m&agrave;u trắng</em>. Như đ&atilde; biết, chanh chứa h&agrave;m lượng axit rất cao n&ecirc;n nếu bạn muốn l&agrave;m trắng đế gi&agrave;y, bạn c&oacute; thể sử dụng chanh tươi để đ&aacute;nh bay&nbsp; c&aacute;c vết ố v&agrave;ng.</p>\r\n\r\n<ul>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Cách thức thực hi&ecirc;̣n v&ocirc; cùng đơn giản, bạn vắt chanh tươi đ&ecirc;̉ l&acirc;́y nước, đựng trong m&ocirc;̣t chén nhỏ.</strong></p>\r\n	</li>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Dùng khăn m&ecirc;̀m nhúng vào nước chanh r&ocirc;̀i chà l&ecirc;n đ&ecirc;́ giày, sau đó dùng bàn chải chà th&acirc;̣t mạnh cho đ&ecirc;́n khi đ&ecirc;́ trắng trở lại. Cách làm này áp dụng với đ&ecirc;́ giày mới bị &ocirc;́ vàng, v&ecirc;́t b&acirc;̉n cứng đ&acirc;̀u có th&ecirc;̉ sẽ khó khăn hơn.</strong></p>\r\n	</li>\r\n</ul>\r\n\r\n<p><a href=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach_lam_sach_de_giay_bi_o_vang_3.jpg\"><img alt=\"cach_lam_sach_de_giay_bi_o_vang_3\" src=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach_lam_sach_de_giay_bi_o_vang_3.jpg\" style=\"height:266px; width:500px\" /></a></p>\r\n\r\n<h3>C&aacute;ch 3: D&ugrave;ng nước cốt chanh kết hợp baking soda l&agrave;m trắng đế gi&agrave;y</h3>\r\n\r\n<p><a href=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach-lam-trang-de-giay-1.jpg\"><img alt=\"cach-lam-trang-de-giay-1\" src=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach-lam-trang-de-giay-1.jpg\" style=\"height:418px; width:650px\" /></a></p>\r\n\r\n<p>Baking soda c&oacute; rất nhiều c&ocirc;ng dụng. Một trong những c&ocirc;ng dụng m&agrave; mọi người hay d&ugrave;ng baking soda l&agrave; tẩy trắng. Ch&iacute;nh v&igrave; vậy, nếu nh&agrave; bạn c&oacute; baking soda th&igrave; c&oacute; thể h&ograve;a baking soda với nước cốt chanh. Sau đ&oacute; nh&uacute;ng b&agrave;n chải đ&aacute;nh răng v&agrave;o hỗn hợp n&agrave;y rồi ch&agrave; nhẹ b&agrave;n chải l&ecirc;n phần đề gi&agrave;y. Ch&agrave; khoảng 2 &ndash; 3 lần, bạn sẽ thấy đế gi&agrave;y của bạn sạch hơn, trắng hơn so với trước.</p>\r\n\r\n<h3>C&aacute;ch 3: D&ugrave;ng nước lau đồ gỗ hoặc chất tẩy m&oacute;ng tay Acetone</h3>\r\n\r\n<p dir=\"ltr\">Trong nước lau đ&ocirc;̀ g&ocirc;̃ có chứa ch&acirc;́t giúp t&acirc;̉y rửa v&ecirc;́t b&acirc;̉n và làm đ&ecirc;́ giày sáng bóng hơn. N&ecirc;́u giày dính v&ecirc;́t &ocirc;́ l&acirc;u ngày, bạn hoàn toàn có th&ecirc;̉ sử dụng dung dịch này đ&ecirc;̉ giặt rửa.</p>\r\n\r\n<ul>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Sau khi loại bùn đ&acirc;́t khỏi đ&ecirc;́ giày, bạn dùng m&ocirc;̣t chi&ecirc;́c khăn m&ecirc;̀m nhúng vào nước lau đ&ocirc;̀ g&ocirc;̃ r&ocirc;̀i chà l&ecirc;n ph&acirc;̀n đ&ecirc;́ giày, nh&acirc;́t là ph&acirc;̀n đ&ecirc;́ bị &ocirc;́ vàng.</strong></p>\r\n	</li>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Ti&ecirc;́p tục chà cho đ&ecirc;́n khi đ&ecirc;́ giày trắng trở lại.</strong></p>\r\n	</li>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Dùng m&ocirc;̣t chi&ecirc;́c khăn sạch khác đ&ecirc;̉ lau lại ph&acirc;̀n đ&ecirc;́ r&ocirc;̀i đặt giày ở nơi thoáng gió đ&ecirc;̉ giày kh&ocirc; là bạn có th&ecirc;̉ sử dụng được.</strong></p>\r\n	</li>\r\n</ul>\r\n\r\n<p><a href=\"https://bountysneakers.com/wp-content/uploads/2019/10/giat_giay_bang_nuoc_tay_rua_mong_tay.jpg\"><img alt=\"giat_giay_bang_nuoc_tay_rua_mong_tay\" src=\"https://bountysneakers.com/wp-content/uploads/2019/10/giat_giay_bang_nuoc_tay_rua_mong_tay.jpg\" style=\"height:450px; width:800px\" /></a></p>\r\n\r\n<h3>C&aacute;ch 4: D&ugrave;ng dấm ăn</h3>\r\n\r\n<p dir=\"ltr\">D&acirc;́m trắng cũng là nguy&ecirc;n li&ecirc;̣u quen thu&ocirc;̣c có mặt ngay trong gian b&ecirc;́p m&agrave; bạn c&oacute; thể d&ugrave;ng để l&agrave;m sạch đế gi&agrave;y cực kỳ hiệu quả.</p>\r\n\r\n<ul>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Bạn sử dụng khăn m&ecirc;̀m th&acirc;́m d&acirc;́m vào đ&ecirc;́ giày, dùng bàn chải đánh răng l&ocirc;ng m&ecirc;̀m chà l&ecirc;n đ&ecirc;́, thao tác mạnh với đ&ecirc;́ cao su, nhẹ nhàng với đ&ecirc;́ nhựa.</strong></p>\r\n	</li>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Sau khi làm sạch đ&ecirc;́ giày bằng d&acirc;́m, bạn giặt lại giày bằng b&ocirc;̣t giặt có tính t&acirc;̉y rửa nhẹ, phơi giày ở nơi thoáng mát đ&ecirc;̉ giày kh&ocirc; tự nhi&ecirc;n.</strong></p>\r\n	</li>\r\n</ul>\r\n\r\n<p><a href=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach_giat_giay_bi_moc_bang_giam_an.jpg\"><img alt=\"cach_giat_giay_bi_moc_bang_giam_an\" src=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach_giat_giay_bi_moc_bang_giam_an.jpg\" style=\"height:364px; width:600px\" /></a>C&aacute;ch 5: D&ugrave;ng dầu gội v&agrave; nước n&oacute;ng</p>\r\n\r\n<ul dir=\"ltr\">\r\n	<li>Nhi&ecirc;̀u bạn còn bán tín bán nghi vì kh&ocirc;ng nghĩ rằng d&acirc;̀u g&ocirc;̣i có th&ecirc;̉&nbsp;<em>làm sạch đ&ecirc;́ giày màu trắng</em>. Nhưng chỉ khi áp dụng bạn mới thực sự th&acirc;́y hi&ecirc;̣u quả của phương pháp này.</li>\r\n	<li>Bạn cho m&ocirc;̣t chút d&acirc;̀u g&ocirc;̣i vào nước nóng, tạo bọt r&ocirc;̀i dùng khăn th&acirc;́m dung dịch l&ecirc;n giày, chà mạnh bằng chính chi&ecirc;́c khăn đó hoặc dùng m&ocirc;̣t chi&ecirc;́c bàn chải khác.</li>\r\n	<li>Sau khi chà sạch đ&ecirc;́, xả giày với nước sạch cho đ&ecirc;́n khi đ&ecirc;́ h&ecirc;́t nhờn và đem phơi giày ở nơi thoáng gió.</li>\r\n</ul>\r\n\r\n<p><a href=\"https://bountysneakers.com/wp-content/uploads/2019/10/lam_sach_de_giay_trang_bang_dau_goi.jpg\"><img alt=\"lam_sach_de_giay_trang_bang_dau_goi\" src=\"https://bountysneakers.com/wp-content/uploads/2019/10/lam_sach_de_giay_trang_bang_dau_goi.jpg\" style=\"height:576px; width:960px\" /></a></p>\r\n\r\n<p>Tr&ecirc;n đ&acirc;y l&agrave; c&aacute;c&nbsp;<a href=\"https://bountysneakers.com/huong-dan-cach-lam-trang-de-giay-bi-o-vang-chuan-chi-5-cach-ve-sinh/\"><strong>c&aacute;ch&nbsp;</strong></a><strong><a href=\"https://bountysneakers.com/huong-dan-cach-lam-trang-de-giay-bi-o-vang-chuan-chi-5-cach-ve-sinh/\">l&agrave;m trắng đế gi&agrave;y</a>&nbsp;bị ố v&agrave;ng</strong>&nbsp;kh&aacute; hữu hiệu m&agrave; kh&ocirc;ng hề g&acirc;y độc hại.</p>\r\n\r\n<p>C&aacute;ch 5: D&ugrave;ng thuốc tẩy</p>\r\n\r\n<p>Nếu như vết ố bẩn tr&ecirc;n đế gi&agrave;y trở n&ecirc;n qu&aacute; kh&oacute; chịu v&agrave; cứng đầu d&ugrave; bạn đ&atilde; thử một trong những c&aacute;ch tr&ecirc;n cũng kh&ocirc;ng t&agrave;i n&agrave;o tẩy sạch được. L&uacute;c n&agrave;y c&oacute; lẽ bạn cần một sức mạnh thật sự, đ&oacute; ch&iacute;nh l&agrave; thuốc tẩy. C&aacute;c loại thuốc tẩy trắng được b&aacute;n nhiều ở c&aacute;c tiệm tạp h&oacute;a, bạn ho&agrave;n to&agrave;n c&oacute; thể dễ d&agrave;ng mua được.</p>\r\n\r\n<p>Đầu ti&ecirc;n bạn pha thuốc tẩy v&agrave;o một x&ocirc; nước, d&ugrave;ng b&agrave;n chải đ&aacute;nh răng nh&uacute;ng v&agrave;o rồi ch&agrave; l&ecirc;n khu vực đế gi&agrave;y bị ố v&agrave;ng. Ch&agrave; xong giữ nguy&ecirc;n th&ecirc;m 15 ph&uacute;t để thuốc tẩy ph&aacute;t huy t&aacute;c dụng. Cuối c&ugrave;ng lau sạch lại l&agrave; đế gi&agrave;y trở n&ecirc;n sạch b&oacute;ng trở lại.</p>\r\n\r\n<p><a href=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach-lam-sach-de-giay-bi-o-vang-1.jpg\"><img alt=\"cach-lam-sach-de-giay-bi-o-vang-1\" src=\"https://bountysneakers.com/wp-content/uploads/2019/10/cach-lam-sach-de-giay-bi-o-vang-1.jpg\" style=\"height:281px; width:500px\" /></a></p>\r\n\r\n<p><strong>Lưu &yacute;</strong>&nbsp;đối với c&aacute;c loại gi&agrave;y vải m&agrave;u kh&aacute;c m&agrave;u trắng, bạn cần cẩn thận tr&aacute;nh thuốc tẩy d&iacute;nh v&agrave;o l&agrave;m mất m&agrave;u khiến cho chiếc gi&agrave;y trở n&ecirc;n xấu x&iacute;, mất thẩm mỹ.</p>\r\n\r\n<h2 dir=\"ltr\">Lưu ý khi l&agrave;m sạch đế giày màu trắng</h2>\r\n\r\n<p dir=\"ltr\">C&ocirc;ng thức&nbsp;làm sạch đ&ecirc;́ giày màu trắng&nbsp;thì đơn giản như v&acirc;̣y nhưng n&ecirc;́u kh&ocirc;ng thực hi&ecirc;̣n c&acirc;̉n th&acirc;̣n, chúng ta v&acirc;̃n có th&ecirc;̉ phạm sai l&acirc;̀m khi&ecirc;́n đ&ocirc;i giày càng ngày càng bị b&acirc;̉n th&ecirc;m đ&acirc;́y. Dưới đ&acirc;y là m&ocirc;̣t s&ocirc;́ lưu ý quan trọng khi bạn&nbsp;<em>làm sạch đ&ecirc;́ giày trắng</em>.</p>\r\n\r\n<ul>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\">Ở bước giặt với xà phòng, bạn phải giặt th&acirc;̣t sạch, đảm bảo kh&ocirc;ng còn cặn xà phòng dính tr&ecirc;n giày bởi sau khi phơi nắng, chính v&ecirc;́t cặn này sẽ tạo thành v&ecirc;̣t &ocirc;́ vàng tr&ecirc;n giày.</p>\r\n	</li>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\">N&ecirc;́u đ&ecirc;́ giày còn nhờn vì chưa được xả sạch, hãy ng&acirc;m đ&ecirc;́ trong nước 5 phút r&ocirc;̀i đem phơi.</p>\r\n	</li>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\">N&ecirc;n bọc ph&acirc;̀n th&acirc;n giày bằng m&ocirc;̣t túi nilon đ&ecirc;̉ khi làm sạch đ&ecirc;́ giày, ph&acirc;̀n th&acirc;n kh&ocirc;ng bị ảnh hưởng.</p>\r\n	</li>\r\n	<li dir=\"ltr\">\r\n	<p dir=\"ltr\"><strong>Kh&ocirc;ng phơi giày ở nơi có nắng to vì đ&ecirc;́ sẽ d&ecirc;̃ bị nhũn m&ecirc;̀m, nh&acirc;́t là đ&ecirc;́ nhựa.</strong></p>\r\n	</li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">N&ecirc;́u giày chỉ bị b&acirc;̉n ph&acirc;̀n đ&ecirc;́, chúng ta kh&ocirc;ng nh&acirc;́t thi&ecirc;́t phải đem cả đ&ocirc;i giày đi giặt nữa bởi đã có những c&ocirc;ng thức chuy&ecirc;n làm sạch đ&ecirc;́ giày r&ocirc;̀i. Những c&ocirc;ng thức&nbsp;l&agrave;m sạch đế gi&agrave;y trắng&nbsp;d&ecirc;̃ thực hi&ecirc;̣n tr&ecirc;n chắc chắn sẽ giúp bạn ti&ecirc;́t ki&ecirc;̣m rất nhiều thời gian v&agrave; c&ocirc;ng sức đấy!</p>\r\n\r\n<p>&nbsp;</p>\r\n', '31/08/2020', '2020-08-31 14:39:29', '2020-09-03 11:53:07');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_category`
 --
 
 CREATE TABLE `tbl_category` (
@@ -69,7 +95,7 @@ CREATE TABLE `tbl_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_category`
+-- Đang đổ dữ liệu cho bảng `tbl_category`
 --
 
 INSERT INTO `tbl_category` (`id_cate`, `cate_name`, `date_cate`) VALUES
@@ -80,7 +106,7 @@ INSERT INTO `tbl_category` (`id_cate`, `cate_name`, `date_cate`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_detail_order`
+-- Cấu trúc bảng cho bảng `tbl_detail_order`
 --
 
 CREATE TABLE `tbl_detail_order` (
@@ -94,7 +120,7 @@ CREATE TABLE `tbl_detail_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_detail_order`
+-- Đang đổ dữ liệu cho bảng `tbl_detail_order`
 --
 
 INSERT INTO `tbl_detail_order` (`id_order`, `id_product`, `size`, `quantity_order`, `price_detail`, `total`, `status`) VALUES
@@ -106,7 +132,7 @@ INSERT INTO `tbl_detail_order` (`id_order`, `id_product`, `size`, `quantity_orde
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_discount`
+-- Cấu trúc bảng cho bảng `tbl_discount`
 --
 
 CREATE TABLE `tbl_discount` (
@@ -118,7 +144,7 @@ CREATE TABLE `tbl_discount` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_discount`
+-- Đang đổ dữ liệu cho bảng `tbl_discount`
 --
 
 INSERT INTO `tbl_discount` (`id_discount`, `code`, `percent`, `day_create`, `end_day`) VALUES
@@ -128,7 +154,7 @@ INSERT INTO `tbl_discount` (`id_discount`, `code`, `percent`, `day_create`, `end
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_img_product`
+-- Cấu trúc bảng cho bảng `tbl_img_product`
 --
 
 CREATE TABLE `tbl_img_product` (
@@ -139,7 +165,7 @@ CREATE TABLE `tbl_img_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_img_product`
+-- Đang đổ dữ liệu cho bảng `tbl_img_product`
 --
 
 INSERT INTO `tbl_img_product` (`id_product`, `name_img_1`, `name_img_2`, `name_img_3`) VALUES
@@ -152,7 +178,7 @@ INSERT INTO `tbl_img_product` (`id_product`, `name_img_1`, `name_img_2`, `name_i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_order`
+-- Cấu trúc bảng cho bảng `tbl_order`
 --
 
 CREATE TABLE `tbl_order` (
@@ -167,7 +193,7 @@ CREATE TABLE `tbl_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_order`
+-- Đang đổ dữ liệu cho bảng `tbl_order`
 --
 
 INSERT INTO `tbl_order` (`id_order`, `id_account`, `note`, `minus_points`, `percent`, `sum_total`, `status`, `date_order`) VALUES
@@ -182,7 +208,7 @@ INSERT INTO `tbl_order` (`id_order`, `id_account`, `note`, `minus_points`, `perc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_product`
+-- Cấu trúc bảng cho bảng `tbl_product`
 --
 
 CREATE TABLE `tbl_product` (
@@ -199,7 +225,7 @@ CREATE TABLE `tbl_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_product`
+-- Đang đổ dữ liệu cho bảng `tbl_product`
 --
 
 INSERT INTO `tbl_product` (`id_product`, `id_cate`, `product_name`, `quantity`, `price`, `img`, `description`, `date_creat`, `status`, `percent`) VALUES
@@ -246,7 +272,7 @@ INSERT INTO `tbl_product` (`id_product`, `id_cate`, `product_name`, `quantity`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_size_shoes`
+-- Cấu trúc bảng cho bảng `tbl_size_shoes`
 --
 
 CREATE TABLE `tbl_size_shoes` (
@@ -259,7 +285,7 @@ CREATE TABLE `tbl_size_shoes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_star_rating`
+-- Cấu trúc bảng cho bảng `tbl_star_rating`
 --
 
 CREATE TABLE `tbl_star_rating` (
@@ -271,7 +297,7 @@ CREATE TABLE `tbl_star_rating` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_star_rating`
+-- Đang đổ dữ liệu cho bảng `tbl_star_rating`
 --
 
 INSERT INTO `tbl_star_rating` (`id_product`, `id_account`, `rating`, `rating_proc`, `day_create`) VALUES
@@ -291,7 +317,7 @@ INSERT INTO `tbl_star_rating` (`id_product`, `id_account`, `rating`, `rating_pro
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_status_order`
+-- Cấu trúc bảng cho bảng `tbl_status_order`
 --
 
 CREATE TABLE `tbl_status_order` (
@@ -300,11 +326,11 @@ CREATE TABLE `tbl_status_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `tbl_account`
+-- Chỉ mục cho bảng `tbl_account`
 --
 ALTER TABLE `tbl_account`
   ADD PRIMARY KEY (`id_account`),
@@ -313,13 +339,19 @@ ALTER TABLE `tbl_account`
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indexes for table `tbl_category`
+-- Chỉ mục cho bảng `tbl_blog`
+--
+ALTER TABLE `tbl_blog`
+  ADD PRIMARY KEY (`id_post`);
+
+--
+-- Chỉ mục cho bảng `tbl_category`
 --
 ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`id_cate`);
 
 --
--- Indexes for table `tbl_detail_order`
+-- Chỉ mục cho bảng `tbl_detail_order`
 --
 ALTER TABLE `tbl_detail_order`
   ADD PRIMARY KEY (`id_order`,`id_product`,`size`),
@@ -327,41 +359,41 @@ ALTER TABLE `tbl_detail_order`
   ADD KEY `id_product` (`id_product`);
 
 --
--- Indexes for table `tbl_discount`
+-- Chỉ mục cho bảng `tbl_discount`
 --
 ALTER TABLE `tbl_discount`
   ADD PRIMARY KEY (`id_discount`);
 
 --
--- Indexes for table `tbl_img_product`
+-- Chỉ mục cho bảng `tbl_img_product`
 --
 ALTER TABLE `tbl_img_product`
   ADD PRIMARY KEY (`id_product`),
   ADD KEY `id_product` (`id_product`);
 
 --
--- Indexes for table `tbl_order`
+-- Chỉ mục cho bảng `tbl_order`
 --
 ALTER TABLE `tbl_order`
   ADD PRIMARY KEY (`id_order`),
   ADD KEY `id_customer` (`id_account`);
 
 --
--- Indexes for table `tbl_product`
+-- Chỉ mục cho bảng `tbl_product`
 --
 ALTER TABLE `tbl_product`
   ADD PRIMARY KEY (`id_product`),
   ADD KEY `id_cate` (`id_cate`);
 
 --
--- Indexes for table `tbl_size_shoes`
+-- Chỉ mục cho bảng `tbl_size_shoes`
 --
 ALTER TABLE `tbl_size_shoes`
   ADD PRIMARY KEY (`id_size`),
   ADD KEY `id_product` (`id_product`);
 
 --
--- Indexes for table `tbl_star_rating`
+-- Chỉ mục cho bảng `tbl_star_rating`
 --
 ALTER TABLE `tbl_star_rating`
   ADD PRIMARY KEY (`id_product`,`id_account`),
@@ -369,96 +401,102 @@ ALTER TABLE `tbl_star_rating`
   ADD KEY `id_product` (`id_product`);
 
 --
--- Indexes for table `tbl_status_order`
+-- Chỉ mục cho bảng `tbl_status_order`
 --
 ALTER TABLE `tbl_status_order`
   ADD PRIMARY KEY (`id_order`),
   ADD KEY `id_order` (`id_order`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `tbl_account`
+-- AUTO_INCREMENT cho bảng `tbl_account`
 --
 ALTER TABLE `tbl_account`
   MODIFY `id_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
--- AUTO_INCREMENT for table `tbl_category`
+-- AUTO_INCREMENT cho bảng `tbl_blog`
+--
+ALTER TABLE `tbl_blog`
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_category`
 --
 ALTER TABLE `tbl_category`
   MODIFY `id_cate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `tbl_discount`
+-- AUTO_INCREMENT cho bảng `tbl_discount`
 --
 ALTER TABLE `tbl_discount`
   MODIFY `id_discount` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tbl_order`
+-- AUTO_INCREMENT cho bảng `tbl_order`
 --
 ALTER TABLE `tbl_order`
   MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
--- AUTO_INCREMENT for table `tbl_product`
+-- AUTO_INCREMENT cho bảng `tbl_product`
 --
 ALTER TABLE `tbl_product`
   MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
--- AUTO_INCREMENT for table `tbl_size_shoes`
+-- AUTO_INCREMENT cho bảng `tbl_size_shoes`
 --
 ALTER TABLE `tbl_size_shoes`
   MODIFY `id_size` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `tbl_detail_order`
+-- Các ràng buộc cho bảng `tbl_detail_order`
 --
 ALTER TABLE `tbl_detail_order`
   ADD CONSTRAINT `fk_id_order_tbl_detail_order_tbl_order` FOREIGN KEY (`id_order`) REFERENCES `tbl_order` (`id_order`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_id_product_tbl_detail_order_tbl_product` FOREIGN KEY (`id_product`) REFERENCES `tbl_product` (`id_product`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
--- Constraints for table `tbl_img_product`
+-- Các ràng buộc cho bảng `tbl_img_product`
 --
 ALTER TABLE `tbl_img_product`
   ADD CONSTRAINT `fk_id_product_tbl_img_product_tbl_product` FOREIGN KEY (`id_product`) REFERENCES `tbl_product` (`id_product`);
 
 --
--- Constraints for table `tbl_order`
+-- Các ràng buộc cho bảng `tbl_order`
 --
 ALTER TABLE `tbl_order`
   ADD CONSTRAINT `fk_id_customer_tbl_order_tbl_customer` FOREIGN KEY (`id_account`) REFERENCES `tbl_account` (`id_account`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
--- Constraints for table `tbl_product`
+-- Các ràng buộc cho bảng `tbl_product`
 --
 ALTER TABLE `tbl_product`
   ADD CONSTRAINT `fk_id_cate_tbl_product_tbl_category` FOREIGN KEY (`id_cate`) REFERENCES `tbl_category` (`id_cate`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
--- Constraints for table `tbl_size_shoes`
+-- Các ràng buộc cho bảng `tbl_size_shoes`
 --
 ALTER TABLE `tbl_size_shoes`
   ADD CONSTRAINT `fk_id_product_tbl_size_shoes_tbl_product` FOREIGN KEY (`id_product`) REFERENCES `tbl_product` (`id_product`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
--- Constraints for table `tbl_star_rating`
+-- Các ràng buộc cho bảng `tbl_star_rating`
 --
 ALTER TABLE `tbl_star_rating`
   ADD CONSTRAINT `fk_id_account_tbl_star_rating_tbl_account` FOREIGN KEY (`id_account`) REFERENCES `tbl_account` (`id_account`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_id_product_tbl_star_rating_tbl_product` FOREIGN KEY (`id_product`) REFERENCES `tbl_product` (`id_product`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
--- Constraints for table `tbl_status_order`
+-- Các ràng buộc cho bảng `tbl_status_order`
 --
 ALTER TABLE `tbl_status_order`
   ADD CONSTRAINT `fk_id_order_tbl_status_order_tbl_order` FOREIGN KEY (`id_order`) REFERENCES `tbl_order` (`id_order`) ON DELETE NO ACTION ON UPDATE CASCADE;
