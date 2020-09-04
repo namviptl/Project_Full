@@ -18,18 +18,40 @@
               }
               ?>
           </div>
-          <div class="mt-30">
-            <div class="ps-pagination">
-              <ul class="pagination">
-                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">...</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-              </ul>
+            <div class="ps-product-action">
+                <div class="ps-pagination">
+                    <ul class="pagination">
+                        <li><a class="page-link" href="index.php?page=blog&pages=<?php
+                            if(isset($_GET['pages'])){
+                                $page = $_GET['pages'];
+                                if($page <= 1){
+                                    echo $page;
+                                }else{
+                                    echo $page -= 1;
+                                }
+                            }
+                            ?>"><i class="fa fa-angle-left"></i></a></li>
+                        <?php
+                        for ($i = 1; $i <= $pagination; $i++) {
+                            ?>
+
+                            <li <?php if (isset($_GET["pages"]) && $_GET["pages"] == $i) {echo 'class="active"';} ?>><a class="page-link" href="index.php?page=blog&pages=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                            <?php
+                        }
+                        ?>
+                        <li><a href="index.php?page=blog&pages=<?php
+                            if(isset($_GET['pages'])){
+                                $page = $_GET['pages'];
+                                if($page == $pagination){
+                                    echo $page;
+                                }else{
+                                    echo $page += 1;
+                                }
+                            }
+                            ?>"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
       </div>
     </main>

@@ -1,5 +1,5 @@
 <?php if (count($rs_pro) < 1) {
-  header('Location: index.php?page=adidas');
+  header('Location: index.php?page=adidas&pages=1');
 } ?>
 <div class="ps-section--features-product ps-section masonry-root pt-50 pb-80">
   <div class="ps-container">
@@ -11,10 +11,8 @@
       <div class="ps-product__filter">
           <select class="ps-select selectpicker" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
               <option value="default">SẮP XẾP THEO</option>
-              <option value="index.php?page=adidas&method=desc2">SẢN PHẨM MỚI</option>
-              <option value="index.php?page=adidas&method=asc2">SẢN PHẨM CŨ</option>
-              <option value="index.php?page=adidas&method=price_desc2">GÍA GIẢM DẦN</option>
-              <option value="index.php?page=adidas&method=price_asc2">GÍA TĂNG DẦN</option>
+              <option value="index.php?page=adidas&pages=1&method=desc">GÍA GIẢM DẦN</option>
+              <option value="index.php?page=adidas&pages=1&method=asc">GÍA TĂNG DẦN</option>
           </select>
       </div>
   </div>

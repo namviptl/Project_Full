@@ -31,6 +31,22 @@ class Blog_m extends Connect
         return $pre->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getpageBlog($from, $row){
+        $sql = "SELECT * FROM tbl_blog ORDER BY tbl_blog.id_post DESC LIMIT $from, $row";
+        $pre = $this->pdo->prepare($sql);
+
+        $pre->execute();
+        return $pre->fetchAll(PDO::FETCH_ASSOC);
+    }
+    //Đếm số acc
+    public function getNumber(){
+        $sql = "SELECT tbl_blog.id_post FROM tbl_blog";
+        $pre = $this->pdo->prepare($sql);
+
+        $pre->execute();
+        return $pre->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     //Thêm bài viết
     public function addBlog($post_avatar, $post_name, $description, $content, $dateTime  ){
         $sql = "INSERT INTO tbl_blog (post_avatar, post_name, description, content, dateTime) VALUES (:post_avatar, :post_name, :description, :content, :dateTime);";

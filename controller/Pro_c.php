@@ -607,7 +607,7 @@
 				case 'search-product':
 					if (isset($_POST['sb_search'])) {
 						$keys = '%'.$_POST['keys'].'%';
-						$row = 16; // số tin một trang
+						$row = 999; // số tin một trang
 						$number = count($this->pro->getNumber()); // Tổng số bản ghi
 						$pagination = ceil($number/$row);
 						
@@ -632,10 +632,17 @@
 						$pages = $_GET['pages'];
 					}else{
 						$pages = 1;
-					}	
-					$from = ($pages - 1) * $row;
-					$rs_pro = $this->pro->getProdCate($adidas, $from, $row);
-					$count = count($rs_pro);
+					}
+
+                    $from = ($pages - 1) * $row;
+                    if ($method = 'desc'){
+                        $rs_pro = $this->pro->getProdSortByDESC($adidas, $from, $row);
+                    }elseif($method = 'asc'){
+                        $rs_pro = $this->pro->getProdSortByASC($adidas, $from, $row);
+                    }else{
+                        $rs_pro = $this->pro->getProdCate($adidas, $from, $row);
+                    }
+                    $count = count($rs_pro);
 					
 					include_once 'views/adidas.php';
 					break;
