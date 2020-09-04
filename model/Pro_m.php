@@ -64,15 +64,36 @@
 			return $pre->fetchAll(PDO::FETCH_ASSOC);
 		}
 
-		//Danh sách sản phẩm adidas
+		//Danh sách sản phẩm theo Cate
 		public function getProdCate($cate_name, $from, $row){
-			$sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY tbl_product.id_product DESC LIMIT $from, $row";
+			$sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY tbl_product.id_product ASC LIMIT $from, $row";
 			$pre = $this->pdo->prepare($sql);
 			$pre->bindParam(':cate_name', $cate_name);
 			$pre->execute();
 
 			return $pre->fetchAll(PDO::FETCH_ASSOC);
 		}
+
+		//Sắp xếp sản phẩm theo giá giảm dần
+        public function getProdSortByDESC($cate_name, $from, $row){
+            $sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY tbl_product.price DESC LIMIT $from, $row";
+            $pre = $this->pdo->prepare($sql);
+            $pre->bindParam(':cate_name', $cate_name);
+            $pre->execute();
+
+            return $pre->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        //Sắp xếp sản phẩm theo giá tăng dần
+        public function getProdSortByASC($cate_name, $from, $row){
+            $sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY tbl_product.price ASC LIMIT $from, $row";
+            $pre = $this->pdo->prepare($sql);
+            $pre->bindParam(':cate_name', $cate_name);
+            $pre->execute();
+
+            return $pre->fetchAll(PDO::FETCH_ASSOC);
+        }
+
 		//Lấy số sản phẩm
 		public function getNumberCate($cate_name){
 			$sql = "SELECT tbl_product.id_product FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name";

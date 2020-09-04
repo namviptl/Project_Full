@@ -35,7 +35,19 @@ class Blog_c extends Blog_m
                 include_once 'views/blog-detail.php';
                 break;
             default:
-                $rs_blog = $this->blog->getBlog();
+                $row = 2; // số tin một trang
+                $number = count($this->blog->getNumberPost()); // Tổng số bản ghi
+                $pagination = ceil($number/$row);
+
+                if (isset($_GET['pages'])) {
+                    $pages = $_GET['pages'];
+                }else{
+                    $pages = 1;
+                }
+                $from = ($pages - 1) * $row;
+                $rs_blog = $this->blog->getPageBlog($from, $row);
+                $count = count($rs_blog);
+
                 include_once 'views/blog.php';
                 break;
         }

@@ -34,9 +34,9 @@
 	    <tr>
 	      <th scope="row" class="text-center"><?php echo $stt;?></th>
 	      <td class="text-center"><?php echo $value['product_name'];?></td>
-	      <td class="text-center"><img style="width: 70%;" src="images/img_detail/<?php echo $value['name_img_1'] ?>"></td>
-	      <td class="text-center"><img style="width: 70%;" src="images/img_detail/<?php echo $value['name_img_2'] ?>"></td>
-	      <td class="text-center"><img style="width: 70%;" src="images/img_detail/<?php echo $value['name_img_3'] ?>"></td>
+	      <td class="text-center"><img style="width: 40%;" src="images/img_detail/<?php echo $value['name_img_1'] ?>"></td>
+	      <td class="text-center"><img style="width: 40%;" src="images/img_detail/<?php echo $value['name_img_2'] ?>"></td>
+	      <td class="text-center"><img style="width: 40%;" src="images/img_detail/<?php echo $value['name_img_3'] ?>"></td>
 	      <td class="text-center">
 			<a href="index.php?page=list-img&method=edit&id=<?php echo $value['id_product']?>">
 				<button class="btn btn-dark">Sửa</button>

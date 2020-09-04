@@ -11,19 +11,19 @@
         </li>
 
         <li class="menu-item">
-          <a href="index.php?page=adidas">Adidas</a>
+          <a href="index.php?page=adidas&pages=1">Adidas</a>
         </li>
 
         <li class="menu-item">
-          <a href="index.php?page=nike">Nike</a>
+          <a href="index.php?page=nike&pages=1">Nike</a>
         </li>
 
         <li class="menu-item">
-          <a href="index.php?page=vans">Vans</a>
+          <a href="index.php?page=vans&pages=1">Vans</a>
         </li>
 
         <li class="menu-item">
-          <a href="index.php?page=blog">Blog</a>
+          <a href="index.php?page=blog&pages=1">Blog</a>
         </li>
       </ul>
     </div>
