@@ -11,8 +11,8 @@
       <div class="ps-product__filter">
           <select class="ps-select selectpicker" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
               <option value="default">SẮP XẾP THEO</option>
-              <option value="index.php?page=adidas&pages=1&method=desc">GÍA GIẢM DẦN</option>
               <option value="index.php?page=adidas&pages=1&method=asc">GÍA TĂNG DẦN</option>
+              <option value="index.php?page=adidas&pages=1&method=desc">GÍA GIẢM DẦN</option>
           </select>
       </div>
   </div>
@@ -105,12 +105,12 @@
                 echo $page -= 1;
               }
             }
-        ?>"><i class="fa fa-angle-left"></i></a></li>
+        ?>&method=<?php echo $method; ?>"><i class="fa fa-angle-left"></i></a></li>
       <?php  
           for ($i = 1; $i <= $pagination; $i++) { 
         ?>
         
-        <li <?php if (isset($_GET["pages"]) && $_GET["pages"] == $i) {echo 'class="active"';} ?>><a class="page-link" href="index.php?page=adidas&pages=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+        <li <?php if (isset($_GET["pages"]) && $_GET["pages"] == $i) {echo 'class="active"';} ?>><a class="page-link" href="index.php?page=adidas&pages=<?php echo $i; ?>&method=<?php echo $method; ?>"><?php echo $i; ?></a></li>
         <?php
           }
         ?>
@@ -123,7 +123,7 @@
                 echo $page += 1;
               }
             }
-        ?>"><i class="fa fa-angle-right"></i></a></li> 
+        ?>&method=<?php echo $method; ?>"><i class="fa fa-angle-right"></i></a></li>
      <!--  <li><a href="#">...</a></li> -->
       
     </ul>

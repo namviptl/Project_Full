@@ -635,13 +635,25 @@
 					}
 
                     $from = ($pages - 1) * $row;
-                    if ($method = 'desc'){
-                        $rs_pro = $this->pro->getProdSortByDESC($adidas, $from, $row);
-                    }elseif($method = 'asc'){
-                        $rs_pro = $this->pro->getProdSortByASC($adidas, $from, $row);
+
+                    if (isset($_GET['method'])) {
+                        $method = $_GET['method'];
                     }else{
-                        $rs_pro = $this->pro->getProdCate($adidas, $from, $row);
+                        $method = 'default';
                     }
+
+                    switch ($method){
+                        case 'desc':
+                            $rs_pro = $this->pro->getProdSortByDESC($adidas, $from, $row);
+                            break;
+                        case 'asc':
+                            $rs_pro = $this->pro->getProdSortByASC($adidas, $from, $row);
+                            break;
+                        default:
+                            $rs_pro = $this->pro->getProdCate($adidas, $from, $row);
+                            break;
+                    }
+
                     $count = count($rs_pro);
 					
 					include_once 'views/adidas.php';
@@ -658,7 +670,25 @@
 						$pages = 1;
 					}	
 					$from = ($pages - 1) * $row;
-					$rs_pro = $this->pro->getProdCate($nike, $from, $row);
+
+                    if (isset($_GET['method'])) {
+                        $method = $_GET['method'];
+                    }else{
+                        $method = 'default';
+                    }
+
+                    switch ($method){
+                        case 'desc':
+                            $rs_pro = $this->pro->getProdSortByDESC($nike, $from, $row);
+                            break;
+                        case 'asc':
+                            $rs_pro = $this->pro->getProdSortByASC($nike, $from, $row);
+                            break;
+                        default:
+                            $rs_pro = $this->pro->getProdCate($nike, $from, $row);
+                            break;
+                    }
+
 					$count = count($rs_pro);
 					
 					include_once 'views/nike.php';
@@ -675,7 +705,25 @@
 						$pages = 1;
 					}	
 					$from = ($pages - 1) * $row;
-					$rs_pro = $this->pro->getProdCate($vans, $from, $row);
+
+                    if (isset($_GET['method'])) {
+                        $method = $_GET['method'];
+                    }else{
+                        $method = 'default';
+                    }
+
+                    switch ($method){
+                        case 'desc':
+                            $rs_pro = $this->pro->getProdSortByDESC($vans, $from, $row);
+                            break;
+                        case 'asc':
+                            $rs_pro = $this->pro->getProdSortByASC($vans, $from, $row);
+                            break;
+                        default:
+                            $rs_pro = $this->pro->getProdCate($vans, $from, $row);
+                            break;
+                    }
+
 					$count = count($rs_pro);
 					
 					include_once 'views/vans.php';

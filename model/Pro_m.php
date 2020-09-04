@@ -66,7 +66,7 @@
 
 		//Danh sách sản phẩm theo Cate
 		public function getProdCate($cate_name, $from, $row){
-			$sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY tbl_product.id_product DESC LIMIT $from, $row";
+			$sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY tbl_product.id_product ASC LIMIT $from, $row";
 			$pre = $this->pdo->prepare($sql);
 			$pre->bindParam(':cate_name', $cate_name);
 			$pre->execute();
