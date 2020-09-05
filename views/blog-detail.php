@@ -15,91 +15,16 @@
                         <?php echo $value['content'] ?>
                     </div>
                     <div class="ps-post__footer">
-                      <p class="ps-post__tags"><i class="fa fa-tags"></i><a href="blog-list.html">Man shoe</a>,<a href="blog-list.html"> Woman</a>,<a href="blog-list.html"> Nike</a></p>
-                      <div class="ps-post__actions"><span><i class="fa fa-comments"></i> 23 Comments</span><span><i class="fa fa-heart"></i>  likes</span>
-                        <div class="ps-post__social"><i class="fa fa-share-alt"></i><a href="#">Share</a>
-                          <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                          </ul>
-                        </div>
+                      <p class="ps-post__tags"><i class="fa fa-tags"></i><a href="index.php?page=adidas&pages=1"> Adidas</a>,<a href="index.php?page=nike&pages=1"> Nike</a>,<a href="index.php?page=vans&pages=1"> Vans</a></p>
+                      <div class="ps-post__actions">
+                          <div class="fb-like" data-href="https://www.facebook.com/NTN-STORE-103288208184723" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="ps-author">
-                    <div class="ps-author__thumbnail"><img src="../../publics/images/user/1.jpg" alt=""></div>
-                    <div class="ps-author__content">
-                      <header>
-                        <h4>MARK GREY</h4>
-                        <p>WEB DESIGNER</p>
-                      </header>
-                      <p>The development of the mass spectrometer allowed the mass of atoms to be measured with increased accuracy. The device uses the launch and continued operation of the Hubble space telescope probably.</p>
                     </div>
                   </div>
                   <div class="ps-comments">
-                    <h3>Comment(4)</h3>
-                    <div class="ps-comment">
-                      <div class="ps-comment__thumbnail"><img src="../../publics/images/user/2.jpg" alt=""></div>
-                      <div class="ps-comment__content">
-                        <header>
-                          <h4>MARK GREY <span>(15 minutes ago)</span></h4><a href="#">Reply<i class="ps-icon-arrow-left"></i></a>
-                        </header>
-                        <p>The development of the mass spectrometer allowed the mass of atoms to be measured with increased accuracy. The device uses the launch and continued operation of the Hubble space telescope probably.</p>
-                      </div>
-                    </div>
-                    <div class="ps-comment ps-comment--reply">
-                      <div class="ps-comment__thumbnail"><img src="../../publics/images/user/3.jpg" alt=""></div>
-                      <div class="ps-comment__content">
-                        <header>
-                          <h4>MARK GREY <span>(3 hours ago)</span></h4><a href="#">Reply<i class="ps-icon-arrow-left"></i></a>
-                        </header>
-                        <p>The development of the mass spectrometer allowed the mass of atoms to be measured with increased accuracy. The device uses  continue ace explore.</p>
-                      </div>
-                    </div>
-                    <div class="ps-comment">
-                      <div class="ps-comment__thumbnail"><img src="../../publics/images/user/4.jpg" alt=""></div>
-                      <div class="ps-comment__content">
-                        <header>
-                          <h4>MARK GREY <span>(1 day ago)</span></h4><a href="#">Reply<i class="ps-icon-arrow-left"></i></a>
-                        </header>
-                        <p>The development of the mass spectrometer allowed the mass of atoms to be measured with increased accuracy. The device uses the launch and continued operation of the Hubble space telescope probably.</p>
-                      </div>
-                    </div>
+                      <div class="fb-comments" data-href="https://www.facebook.com/NTN-STORE-103288208184723" data-numposts="" data-width="1000"></div>
+                      <div id="fb-root"></div>
                   </div>
-                  <form class="ps-form--comment" action="do_action" method="post">
-                    <h3>LEAVE A COMMENT</h3>
-                    <div class="row">
-                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                            <div class="form-group">
-                              <input class="form-control" type="text" placeholder="Your Name">
-                            </div>
-                          </div>
-                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                            <div class="form-group">
-                              <input class="form-control" type="email" placeholder="E-mail">
-                            </div>
-                          </div>
-                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                            <div class="form-group">
-                              <input class="form-control" type="text" placeholder="Subject">
-                            </div>
-                          </div>
-                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                            <div class="form-group">
-                              <input class="form-control" type="text" placeholder="Phone Number">
-                            </div>
-                          </div>
-                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                            <div class="form-group">
-                              <textarea class="form-control" rows="6" placeholder="Text your message here..."></textarea>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="form-group">
-                      <button class="ps-btn ps-btn--sm ps-contact__submit">Send Message<i class="ps-icon-next"></i></button>
-                    </div>
-                  </form>
                 </div>
                   <?php
               }

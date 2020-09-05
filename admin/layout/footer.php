@@ -1,6 +1,6 @@
 <footer>
   <div class="pull-right">
-    Admin shop shoes
+    Admin NTN STORE
   </div>
   <div class="clearfix"></div>
 </footer>

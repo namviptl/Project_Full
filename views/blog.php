@@ -1,6 +1,9 @@
 <main class="ps-main">
       <div class="ps-blog-grid pt-80 pb-80">
         <div class="ps-container">
+            <div class="ps-section__header mb-50">
+                <h3 class="ps-section__title" data-mask="BLOG" style="font-size: 40px; color: #2AC37D;">- BLOG</h3>
+            </div>
           <div class="row">
               <?php
               foreach ($rs_blog as $key => $value) {

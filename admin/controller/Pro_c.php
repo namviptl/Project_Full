@@ -107,7 +107,7 @@
 				default:
 					if (isset($_POST['sb_search'])) {
 						$keys = '%'.$_POST['keys'].'%';
-						$row = 6; // số tin một trang
+						$row = 10; // số tin một trang
 						$number = count($this->pro->getNumber()); // Tổng số bản ghi
 						$pagination = ceil($number/$row);
 						
@@ -117,14 +117,14 @@
 							$pages = 1;
 						}	
 						$from = ($pages - 1) * $row;
-						$rs_pro = $this->pro->getProPage($keys, $from, $row);
+						$rs_pro = $this->pro->searchPro($keys, $from, $row);
 						$count = count($rs_pro);
 						if ($count < 1){
 							echo "Không có sản phẩm nào được tìm thấy";
 							//header('Location: index.php?page=list-product');
 						}		
 					}else{
-						$row = 6; // số tin một trang
+						$row = 10; // số tin một trang
 						$number = count($this->pro->getNumber()); // Tổng số bản ghi
 						$pagination = ceil($number/$row);
 						

@@ -35,7 +35,7 @@ class Blog_c extends Blog_m
                 include_once 'views/blog-detail.php';
                 break;
             default:
-                $row = 2; // số tin một trang
+                $row = 6; // số tin một trang
                 $number = count($this->blog->getNumberPost()); // Tổng số bản ghi
                 $pagination = ceil($number/$row);
 

@@ -81,13 +81,34 @@ class Blog_c extends Blog_m
             default:
                 if (isset($_POST['sb_search'])) {
                     $keys = '%'.$_POST['keys'].'%';
-                    $rs_blog = $this->blog->searchBlog($keys);
+                    $row = 8; // số tin một trang
+                    $number = count($this->blog->getNumber()); // Tổng số bản ghi
+                    $pagination = ceil($number/$row);
+
+                    if (isset($_GET['pages_sr'])) {
+                        $pages = $_GET['pages_sr'];
+                    }else{
+                        $pages = 1;
+                    }
+                    $from = ($pages - 1) * $row;
+                    $rs_blog = $this->blog->searchBlog($keys, $from, $row);
                     $count = count($rs_blog);
                     if ($count < 1){
                         echo "Không có bài viết nào được tìm thấy";
                     }
                 }else{
-                    $rs_blog = $this->blog->getBlog();
+                    $row = 8; // số tin một trang
+                    $number = count($this->blog->getNumber()); // Tổng số bản ghi
+                    $pagination = ceil($number/$row);
+
+                    if (isset($_GET['pages'])) {
+                        $pages = $_GET['pages'];
+                    }else{
+                        $pages = 1;
+                    }
+
+                    $from = ($pages - 1) * $row;
+                    $rs_blog = $this->blog->getpageBlog($from, $row);
                 }
 
                 include_once 'views/blog/list-blog.php';

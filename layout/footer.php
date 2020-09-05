@@ -61,6 +61,12 @@
               </ul>
             </footer>
           </aside>
+            <div class="fb-page" data-href="https://www.facebook.com/NTN-STORE-103288208184723" data-tabs="timeline" data-width="210" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/NTN-STORE-103288208184723" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/NTN-STORE-103288208184723">NTN STORE
+                    </a>
+                </blockquote>
+            </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 ">
           <aside class="ps-widget--footer ps-widget--link">
@@ -87,7 +93,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
           <ul class="ps-social">
-            <li><a href="https://www.facebook.com/Gi%C3%A0y-NTN-103765321445046/" target="blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.facebook.com/NTN-STORE-103288208184723" target="blank"><i class="fa fa-facebook"></i></a></li>
             <li><a><i class="fa fa-google-plus"></i></a></li>
             <li><a target="blank"><i class="fa fa-twitter"></i></a></li>
             <li><a target="blank"><i class="fa fa-instagram"></i></a></li>

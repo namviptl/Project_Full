@@ -20,10 +20,10 @@
         <textarea type="text" required="" class="form-control ckeditor" name="content" id="ckeditor" cols="30" rows="10"></textarea>
     </div>
 
-	<button type="submit" name="sm_add" class="btn btn-primary">
+	<button type="submit" name="sm_add" class="btn btn-dark">
 		Thêm mới
 	</button>
-    <a href="index.php?page=list-blog&method=list" class="btn btn-success">
+    <a href="index.php?page=list-blog&method=list" class="btn btn-dark">
         Quay lại
     </a>
 </form>

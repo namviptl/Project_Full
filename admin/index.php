@@ -26,7 +26,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main" style="height: 1000px;">
+        <div class="right_col" role="main" style="height: 1470px;">
         <?php 
             if (isset($_GET['page'])) {
               $page = $_GET['page'];

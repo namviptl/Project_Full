@@ -170,6 +170,9 @@
     <script type="text/javascript" src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
     <!-- Custom scripts-->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=949994222136767&autoLogAppEvents=1" nonce="T6MHeMd9"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=949994222136767&autoLogAppEvents=1" nonce="Qd47rcO7"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=949994222136767&autoLogAppEvents=1" nonce="jMUZYLrf"></script>
     <script src="https://sp.zalo.me/plugins/sdk.js"></script>
     <script type="text/javascript" src="publics/js/main.js"></script>
     <script type="text/javascript" src="publics/js/myJava.js"></script>
