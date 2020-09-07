@@ -111,4 +111,3 @@
     </div>
   </div>
 </div>
-<div class="zalo-chat-widget" data-oaid="3517336795822052066" data-welcome-message="Chúng tôi bán các loại giày Nike, Adidas, Jordan Authentic. Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>

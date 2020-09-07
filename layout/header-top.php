@@ -19,7 +19,7 @@
           <?php
             }else{
           ?>
-            <a href="index.php?page=login">Đăng Nhập</a>
+            <a href="index.php?page=login">Tài khoản</a>
           <?php   
             }
            ?>

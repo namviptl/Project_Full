@@ -47,7 +47,8 @@
             } ?>
           </tbody>
          </div>
-      </table>  
+      </table>
+      <h5>Nếu có thay đổi về đơn hàng xin vui lòng liên hệ hotline: 0347173650!</h5>  
     </div>
   </div>
 </div>
