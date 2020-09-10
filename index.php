@@ -43,10 +43,7 @@
    
           <?php include_once 'layout/nav.php'; ?>
     </header>
-
           <?php include_once 'layout/header-services.php'; ?>
-
-
     <main class="ps-main">
      
         <?php 
