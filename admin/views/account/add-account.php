@@ -10,6 +10,7 @@
 		<select name="type" class="form-control">
 		  	<option value="Quản lý">Quản lý</option>
 		  	<option value="Khách hàng">Khách hàng</option>
+		  	<option value="Nhân viên">Nhân viên</option>
 		</select>
 	</div>
 

@@ -1,5 +1,22 @@
+<div class="modal fade" id="md_addcart_search" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: #fff;border: solid #fff;">
+        
+            <div class="modal-header">
+                <button type="button"  class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body" id="noti-add">
+                Đã thêm vào giỏ hàng!<a href="index.php?page=cart"><img title="click vào để đến giỏ hàng!" style="width: 30.16px;height: 30.16px; padding-left: 5px;" src="https://media.istockphoto.com/vectors/shopping-cart-icon-silhouette-2-vector-id898295684?k=6&m=898295684&s=170667a&w=0&h=onBaadKObDlxDfDkefq0qFQv6hdKzp4EPGzol8DX8U8="></a>
+            </div>
+            
+        </div>
+    </div>
+</div>
 <?php
-  if (!isset($rs_pro)) {
+  if (!isset($rs_pro) || $_GET['pages'] < 0 || $_GET['pages'] == '') {
      header('Location: index.php?page=home');
   }
  else if (count($rs_pro) < 1){
@@ -79,7 +96,7 @@
                       </select>
                     </div>
 
-                    <button type="button" data-toggle="modal" data-target="#md_addcart" value="<?php echo $value['id_product'] ?>" class="btn btn-danger btn-lg btn-block cart" >Thêm vào giỏ hàng</button>
+                    <button type="button" data-toggle="modal" data-target="#md_addcart_search" value="<?php echo $value['id_product'] ?>" class="btn btn-danger btn-lg btn-block cart" >Thêm vào giỏ hàng</button>
                     
 
                 </div>
@@ -115,3 +132,36 @@
 <?php
 }
 ?>
+<div class="ps-product-action">
+  <div class="ps-pagination">
+    <ul class="pagination">
+      <li><a class="page-link" href="index.php?page=search-product&pages=<?php 
+            if(isset($_GET['pages'])){
+              $page = $_GET['pages'];
+              if($page <= 1){
+                echo $page;
+              }else{
+                echo $page -= 1;
+              }
+            }
+        ?>"><i class="fa fa-angle-left"></i></a></li>
+      <?php  
+          for ($i = 1; $i <= $pagination; $i++) { 
+        ?>
+        <li <?php if (isset($_GET["pages"]) && $_GET["pages"] == $i) {echo 'class="active"';} ?>><a class="page-link" href="index.php?page=search-product&pages=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+        <?php
+          }
+        ?>
+        <li><a href="index.php?page=search-product&pages=<?php 
+            if(isset($_GET['pages'])){
+              $page = $_GET['pages'];
+              if($page == $pagination){
+                echo $page;
+              }else{
+                echo $page += 1;
+              }
+            }
+        ?>"><i class="fa fa-angle-right"></i></a></li>
+    </ul>
+  </div>
+</div>

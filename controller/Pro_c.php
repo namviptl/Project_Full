@@ -488,6 +488,7 @@
 					}
 					break;
 				case 'discount':
+					date_default_timezone_set('Asia/Saigon');
 					$discount = $_POST['discount'];
 					$rs_discount = $this->pro->getDiscount();
 					$percent = 0;
@@ -496,24 +497,32 @@
 						if ($discount == $value['code']) {
 							$discount = $value['code'];
 							$percent = $value['percent'];
+							$day_create = $value['day_create'];
+							$end_day = $value['end_day'];
 							$count = $count - 1;
 						}else{
 							$count = $count;
 						}
 					}
+
 					if ($count < count($rs_discount)) {
-						$_SESSION['percent'] = $percent;
-						if (isset($_SESSION['discount'])) {
-							unset($_SESSION['discount']);
+						if(time() > strtotime($end_day)){
+							$_SESSION['discount'] = 2;
+							unset($_SESSION['percent']);
+						}else{
+							$_SESSION['percent'] = $percent;
+							if (isset($_SESSION['discount'])) {
+								unset($_SESSION['discount']);
+							}
 						}
 					}else if($discount == ''){
 						unset($_SESSION['discount']);
 						unset($_SESSION['percent']);
-					}
-					else{
+					}else{
 						$_SESSION['discount'] = 1;
 						unset($_SESSION['percent']);
-					}			
+					}
+
 					break;
 				case 'cart':
 					include_once 'views/cart.php';
@@ -607,18 +616,38 @@
 				case 'search-product':
 					if (isset($_POST['sb_search'])) {
 						$keys = '%'.$_POST['keys'].'%';
-						$row = 999; // số tin một trang
-						$number = count($this->pro->getNumber()); // Tổng số bản ghi
+						$_SESSION['keys'] = $keys;
+						$row = 8; // số tin một trang
+						$number = count($this->pro->countSearchPro($keys)); // Tổng số bản ghi
 						$pagination = ceil($number/$row);
 						
-						if (isset($_GET['pages_sr'])) {
-							$pages = $_GET['pages_sr'];
+						if (isset($_GET['pages'])) {
+							$pages = $_GET['pages'];
 						}else{
 							$pages = 1;
 						}	
 						$from = ($pages - 1) * $row;
 						$rs_pro = $this->pro->searchPro($keys, $from, $row);
 						$count = count($rs_pro);		
+					}
+					if (isset($_GET['page']) && $_GET['page'] == 'search-product') {
+						if (isset($_SESSION['keys'])) {
+							$keys = $_SESSION['keys'];
+						}else{
+							$keys = null;
+						}
+						$row = 8; // số tin một trang
+						$number = count($this->pro->countSearchPro($keys)); // Tổng số bản ghi
+						$pagination = ceil($number/$row);
+						
+						if (isset($_GET['pages'])) {
+							$pages = $_GET['pages'];
+						}else{
+							$pages = 1;
+						}	
+						$from = ($pages - 1) * $row;
+						$rs_pro = $this->pro->searchPro($keys, $from, $row);
+						$count = count($rs_pro);
 					}
 					include_once 'views/search-product.php';
 					break;

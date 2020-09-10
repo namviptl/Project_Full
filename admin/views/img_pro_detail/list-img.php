@@ -3,7 +3,7 @@
     <h3> Danh sách ảnh chi tiết sản phẩm</h3>
   </div>
   <div class="title_right">
-    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+    <!-- <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
 	    <form action="" method="POST" role="form" class="form">
 	        <div class="input-group">
 	      	
@@ -14,7 +14,7 @@
 	     
 	        </div>
 	    </form>
-    </div>
+    </div> -->
   </div>
 <table class="table table-inverse table-bordered">
 	<thead>
@@ -22,7 +22,10 @@
 			<th class="text-center">STT</th>
 			<th class="text-center" style="width: 150px;">Tên giầy</th>	
 			<th class="text-center" colspan="3">Ảnh chi tiết</th>	
+			<?php if(!isset($_SESSION['nv'])){ ?>
 			<th class="text-center">Chức năng</th>
+			<?php
+  			} ?>
 		</tr>
 	</thead>
 		<?php 
@@ -37,6 +40,7 @@
 	      <td class="text-center"><img style="width: 40%;" src="images/img_detail/<?php echo $value['name_img_1'] ?>"></td>
 	      <td class="text-center"><img style="width: 40%;" src="images/img_detail/<?php echo $value['name_img_2'] ?>"></td>
 	      <td class="text-center"><img style="width: 40%;" src="images/img_detail/<?php echo $value['name_img_3'] ?>"></td>
+	      <?php if(!isset($_SESSION['nv'])){ ?>
 	      <td class="text-center">
 			<a href="index.php?page=list-img&method=edit&id=<?php echo $value['id_product']?>">
 				<button class="btn btn-dark">Sửa</button>
@@ -45,6 +49,8 @@
 				<button class="btn btn-dark">Xóa</button>
 			</a>
 		  </td>
+		  <?php
+  			} ?>
 	    </tr>
 	</tbody>
 		<?php

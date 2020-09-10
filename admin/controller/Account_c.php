@@ -22,14 +22,19 @@
 				case 'logout':
 					unset($_SESSION['name_acc_admin']);
 					unset($_SESSION['img_avarta']);
-					header('Location: index.php?page=home');
+					if (isset($_SESSION['nv'])) {
+						unset($_SESSION['nv']);
+					}
+					header('Location: index.php?page=login');
 					break;
 				case 'add':
 					if (isset($_POST['sm_add'])) {
 						$name = $_POST['name'];
 						$type = $_POST['type'];
 						$user = $_POST['user'];
-						$pass = $_POST['pass'];
+						$pass = sha1($_POST['pass']);
+						$staticSalt = 'M5T7N1999@#!';
+						$password = md5($staticSalt.$pass);
 						$file = $_FILES['avatar'];
 						$fileName = $file['name'];
 						if ($fileName == '') {
@@ -38,7 +43,7 @@
 							$fileName = $user.'_'.$file['name'];
 						}
 						move_uploaded_file($file["tmp_name"], "images/account/".$fileName);
-						$this->acc->addAcc($name, $user, $pass, $type, $fileName);
+						$this->acc->addAcc($name, $user, $password, $type, $fileName);
 					}
 					include_once 'views/account/add-account.php';
 					break;
@@ -96,7 +101,7 @@
 						$id = $_GET['id'];
 						$rs_acc = $this->acc->getIdAcc($id);
 					}else{
-						$row = 6; // số tin một trang
+						$row = 10; // số tin một trang
 						$number = count($this->acc->getNumber()); // Tổng số bản ghi
 						$pagination = ceil($number/$row);
 						

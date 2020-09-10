@@ -1,5 +1,3 @@
-<div class="menu-toggle"><span></span></div>
-<!-- home có features, banner ở giữa, top sales -->
 <!-- modal thông báo  thêm vào giỏ hàng-->
 <div class="modal fade" id="md_addcart" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">

@@ -97,7 +97,7 @@ class Blog_c extends Blog_m
                         echo "Không có bài viết nào được tìm thấy";
                     }
                 }else{
-                    $row = 8; // số tin một trang
+                    $row = 10; // số tin một trang
                     $number = count($this->blog->getNumber()); // Tổng số bản ghi
                     $pagination = ceil($number/$row);
 

@@ -73,7 +73,7 @@
 			$pre->execute();
 		}
 		public function updateStatusF($id_order){
-			$sql = "UPDATE tbl_order SET status = 'Hoàng thành' WHERE tbl_order.id_order = :id_order";
+			$sql = "UPDATE tbl_order SET status = 'Hoàn thành' WHERE tbl_order.id_order = :id_order";
 			$pre = $this->pdo->prepare($sql);
 
 			$pre->bindParam(':id_order', $id_order);

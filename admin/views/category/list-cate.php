@@ -2,22 +2,9 @@
   <div class="title_left">
     <h3> Thêm mới danh mục</h3>
   </div>
-  <div class="title_right">
-    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-	    <form action="" method="POST" role="form" class="form">
-	        <div class="input-group">
-	      	
-		        <input type="text" name="keys" class="form-control" required="" placeholder="Tìm Kiếm Danh Mục...">
-		        <span class="input-group-btn">
-		            <button class="btn btn-default" type="submit" name="sb_search">Tìm!</button>
-		        </span>
-	     
-	        </div>
-	    </form>
-    </div>
-  </div>
   <!-- Thêm mới danh mục -->
-  <p>Tên danh mục</p>
+  <?php if(!isset($_SESSION['nv'])){
+  ?>
   <form action="" method="POST">
 	  <div class="form-group row">
 	    
@@ -31,6 +18,8 @@
 	    </div>
 	  </div>
   </form>
+   <?php
+  } ?>
   <!-- END -->
   <!-- Bảng -->
   <p id="noti"></p> <!-- Hiển thị thông báo -->
@@ -40,7 +29,11 @@
 	    <tr>
 	      <th class="text-center" >STT</th>
 	      <th class="text-center" style="width: 900px;">Danh mục (Hãng giầy)</th>
+	      <?php if(!isset($_SESSION['nv'])){
+  		  ?>
 	      <th class="text-center">Chức năng</th>
+	      <?php
+  			} ?>
 	    </tr>
 	  </thead>
 	  <?php 
@@ -53,6 +46,8 @@
 	    <tr>
 	      <th scope="row" class="text-center"><?php echo $stt ?></th>
 	      <td><?php echo $value['cate_name'] ?></td>
+	      <?php if(!isset($_SESSION['nv'])){
+  		  ?>
 	      <td class="text-center">
 			<a href="index.php?page=list-cate&method=edit&id=<?php echo $value['id_cate'] ?>">
 				<button class="btn btn-dark">Sửa</button>
@@ -61,6 +56,8 @@
 				<button class="btn btn-dark">Xóa</button>
 			</a>
 		  </td>
+		   <?php
+  			} ?>
 	    </tr>
 	  </tbody>
 	   <?php

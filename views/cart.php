@@ -108,6 +108,12 @@ Cập nhật thành công!</div>
                 <strong>Mã khuyến mãi không tồn lại!
               </div>  
             <?php 
+              }else if(isset($_SESSION['discount']) && $_SESSION['discount'] == 2) {
+            ?>
+              <div class="alert alert-success" id="alert_disc" style="width: 260px;">
+                <strong>Mã khuyến đã hết hạn!
+              </div>  
+            <?php 
               }
             ?>
             </div>

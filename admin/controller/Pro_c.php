@@ -122,7 +122,7 @@
 						if ($count < 1){
 							echo "Không có sản phẩm nào được tìm thấy";
 							//header('Location: index.php?page=list-product');
-						}		
+						}	
 					}else{
 						$row = 10; // số tin một trang
 						$number = count($this->pro->getNumber()); // Tổng số bản ghi

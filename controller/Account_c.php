@@ -79,6 +79,12 @@
 						}
 						if ($count == 1) {
 							switch ($type) {
+								case 'Nhân viên':
+									$_SESSION['img_avarta'] = $img_avarta;
+									$_SESSION['name_acc_admin'] = $rs[0]['display_name'];
+									$_SESSION['nv'] = $rs[0]['id_account'];
+									header("Location: admin/index.php");
+									break;
 								case 'Quản lý':
 									$_SESSION['img_avarta'] = $img_avarta;
 									$_SESSION['name_acc_admin'] = $rs[0]['display_name'];

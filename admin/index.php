@@ -1,6 +1,8 @@
 <?php 
+  date_default_timezone_set('Asia/Ho_Chi_Minh');
   ob_start();
   session_start();
+
   //session_destroy();
   if (!isset($_SESSION['name_acc_admin'])) {
     header('Location: ../index.php?page=home');
@@ -70,8 +72,15 @@
                 $img = new Img_pro_c();
                 $img->img_pro();
                 break;
+              case 'list-discount':
+                include_once 'controller/Discount_c.php';
+                $discount = new Discount_c();
+                $discount->discount();
+                break;
               default:
-                echo $_SESSION['name_acc_admin'];
+                include_once 'controller/Home_c.php';
+                $home = new Home_c();
+                $home->home();
                 break;
             }
 
@@ -99,6 +108,7 @@
 
     <!-- Custom Theme Scripts -->
     <script src="js/custom.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <!-- file myjava -->
     <script src="js/myJava.js"></script>
 

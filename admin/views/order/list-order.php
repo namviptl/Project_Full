@@ -28,7 +28,9 @@
 			<th class="text-center">Tổng hóa đơn</th>
 			<th class="text-center" style="width: 100px;">Ngày đặt</th>
 			<th class="text-center">Trạng thái</th>
+			<?php if(!isset($_SESSION['nv'])){ ?>
 			<th class="text-center">Chức năng</th>
+			<?php } ?>
 		</tr>
 	</thead>
 	<?php 
@@ -48,11 +50,13 @@
 	      <td class="text-center"><?php echo number_format($value['sum_total']).' đ' ?></td>
 	      <td class="text-center"><?php echo $value['date_order'] ?></td>
 	      <td class="text-center"><?php echo $value['status'] ?></td>
+	      <?php if(!isset($_SESSION['nv'])){ ?>
 	      <td class="text-center">
 			<a onclick="return confirm('Bạn có chắc chắn muốn xóa đơn hàng này chứ?')" href="index.php?page=list-order&method=del&id=<?php echo $value['id_order'] ?>">
 				<button class="btn btn-dark">Xóa</button>
 			</a>
 		  </td>
+		  <?php } ?>
 	    </tr>
 	</tbody>
 	<?php

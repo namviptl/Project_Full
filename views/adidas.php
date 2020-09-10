@@ -1,3 +1,20 @@
+<div class="modal fade" id="md_addcart_adidas" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: #fff;border: solid #fff;">
+        
+            <div class="modal-header">
+                <button type="button"  class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body" id="noti-add">
+                Đã thêm vào giỏ hàng!<a href="index.php?page=cart"><img title="click vào để đến giỏ hàng!" style="width: 30.16px;height: 30.16px; padding-left: 5px;" src="https://media.istockphoto.com/vectors/shopping-cart-icon-silhouette-2-vector-id898295684?k=6&m=898295684&s=170667a&w=0&h=onBaadKObDlxDfDkefq0qFQv6hdKzp4EPGzol8DX8U8="></a>
+            </div>
+            
+        </div>
+    </div>
+</div>
 <?php if (count($rs_pro) < 1) {
   header('Location: index.php?page=adidas&pages=1');
 } ?>
@@ -60,7 +77,7 @@
                       </select>
                     </div>
 
-                    <button type="button" data-toggle="modal" data-target="#md_addcart" value="<?php echo $value['id_product'] ?>" class="btn btn-danger btn-lg btn-block cart" >Thêm vào giỏ hàng</button>
+                    <button type="button" data-toggle="modal" data-target="#md_addcart_adidas" value="<?php echo $value['id_product'] ?>" class="btn btn-danger btn-lg btn-block cart" >Thêm vào giỏ hàng</button>
                     
 
                 </div>

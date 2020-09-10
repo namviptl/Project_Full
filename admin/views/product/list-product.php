@@ -27,8 +27,11 @@
 			<th class="text-center">Số lượng tồn</th>
 			<th class="text-center">Giá</th>
 			<th class="text-center">Giảm giá</th>
-			<th class="text-center">Mô tả</th>	
+			<th class="text-center">Mô tả</th>
+			<?php if(!isset($_SESSION['nv'])){ ?>
 			<th class="text-center">Chức năng</th>
+			<?php
+  			} ?>
 		</tr>
 	</thead>
 
@@ -47,7 +50,8 @@
 	      <td class="text-center"><?php echo $value['quantity'] ?></td>
 	      <td class="text-center"><?php echo number_format($value['price']).' đ'; ?></td>	
 	      <td class="text-center"><?php echo $value['percent'] ?></td>	
-	      <td style="width: 200px;"><?php echo $value['description'] ?></td>	
+	      <td style="width: 200px;"><?php echo $value['description'] ?></td>
+	      <?php if(!isset($_SESSION['nv'])){ ?>	
 	      <td class="text-center" style="width: 100px;">
 			<a href="index.php?page=list-product&method=edit&id=<?php echo $value['id_product'] ?>">
 				<button class="btn btn-dark">Sửa</button>
@@ -56,6 +60,8 @@
 				<button class="btn btn-dark">Xóa</button>
 			</a>
 		  </td>
+		  <?php
+  			} ?>
 	    </tr>
 	</tbody>
 	<?php

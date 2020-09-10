@@ -108,103 +108,121 @@
         </div>
         <div class="ps-product__info">
           <div class="ps-product__rating">
-          <div id="load_btn_rating"> 
-            <div class="rating" id="btn_ratings">
-              <a style="font-family: 'Archivo Narrow', sans-serif;font-size: 30px; font-style: bold;">ĐÁNH GIÁ</a>
-                <button data-toggle="modal" data-target="#dialog2" onclick="getRating1(<?php echo $rs_prod['id_product'] ?>)" id="1_<?php echo $rs_prod['id_product'] ?>" value='1' class="btn btn_rt"><span id="clr_1" onmouseover="mouseOver1()" 
-                  <?php 
-                    if (!isset($rs_rt['rating'])){ echo "onmouseout='mouseOut()'";} 
-                    else{
-                      if ($rs_rt['rating'] == 1) {
-                        echo "onmouseout='mouseOut1()'";
+            <div id="load_btn_rating"> 
+              <div class="rating" id="btn_ratings">
+                <a style="font-family: 'Archivo Narrow', sans-serif;font-size: 30px; font-style: bold;">ĐÁNH GIÁ</a>
+                  <button data-toggle="modal" data-target="#dialog2" onclick="getRating1(<?php echo $rs_prod['id_product'] ?>)" id="1_<?php echo $rs_prod['id_product'] ?>" value='1' class="btn btn_rt"><span id="clr_1" onmouseover="mouseOver1()" 
+                    <?php 
+                      if (!isset($rs_rt['rating'])){ echo "onmouseout='mouseOut()'";} 
+                      else{
+                        if ($rs_rt['rating'] == 1) {
+                          echo "onmouseout='mouseOut1()'";
+                        }
                       }
-                    }
-                  ?>  
-                class="glyphicon glyphicon-star 
-                  <?php 
-                    if(isset($rs_rt['rating'])){
-                      if($rs_rt['rating']==1){echo 'star_color';}
-                      else if($rs_rt['rating']==2){echo 'star_color';}
-                      else if($rs_rt['rating']==3){echo 'star_color';}
-                      else if($rs_rt['rating']==4){echo 'star_color';}
-                      else if($rs_rt['rating']==5){echo 'star_color';}
-                    } 
-                  ?>
-                  "></span></button>
-                <button data-toggle="modal" data-target="#dialog2" onclick="getRating2(<?php echo $rs_prod['id_product'] ?>)" id="2_<?php echo $rs_prod['id_product'] ?>" value='2' class="btn btn_rt"><span id="clr_2" onmouseover="mouseOver2()" 
-                  <?php 
-                    if (!isset($rs_rt['rating'])) { echo "onmouseout='mouseOut()'";}else{
-                      if ($rs_rt['rating'] == 1) {echo "onmouseout='mouseOut1()'";} 
-                      else if ($rs_rt['rating'] == 2) {echo "onmouseout='mouseOut2()'";} 
-                    }
-                    
-                  ?> 
+                    ?>  
                   class="glyphicon glyphicon-star 
-                  <?php 
-                    if(isset($rs_rt['rating'])){
-                      if($rs_rt['rating']==2){echo 'star_color';}
-                      else if($rs_rt['rating']==3){echo 'star_color';}
-                      else if($rs_rt['rating']==4){echo 'star_color';}
-                      else if($rs_rt['rating']==5){echo 'star_color';}
-                    } 
-                  ?>
-                  "></span></button>
-                <button data-toggle="modal" data-target="#dialog2" onclick="getRating3(<?php echo $rs_prod['id_product'] ?>)" id="3_<?php echo $rs_prod['id_product'] ?>" value='3' class="btn btn_rt"><span id="clr_3" onmouseover="mouseOver3()" 
-                  <?php 
-                    if (!isset($rs_rt['rating'])) { echo "onmouseout='mouseOut()'";}else{
-                      if ($rs_rt['rating'] == 1) {echo "onmouseout='mouseOut1()'";} 
-                      else if ($rs_rt['rating'] == 2) {echo "onmouseout='mouseOut2()'";} 
-                      else if ($rs_rt['rating'] == 3) {echo "onmouseout='mouseOut3()'";} 
-                    }
-                    
-                  ?> 
-                class="glyphicon glyphicon-star 
-                  <?php 
-                    if(isset($rs_rt['rating'])){
-                      if($rs_rt['rating']==3){echo 'star_color';}
-                      else if($rs_rt['rating']==4){echo 'star_color';}
-                      else if($rs_rt['rating']==5){echo 'star_color';}
-                    } 
-                  ?>
-                  "></span></button>
-                <button data-toggle="modal" data-target="#dialog2" onclick="getRating4(<?php echo $rs_prod['id_product'] ?>)" id="4_<?php echo $rs_prod['id_product'] ?>" value='4' class="btn btn_rt"><span id="clr_4" onmouseover="mouseOver4()" 
-                  <?php 
-                    if (!isset($rs_rt['rating'])) { echo "onmouseout='mouseOut()'";}else{
-                      if ($rs_rt['rating'] == 1) {echo "onmouseout='mouseOut1()'";} 
-                      else if ($rs_rt['rating'] == 2) {echo "onmouseout='mouseOut2()'";} 
-                      else if ($rs_rt['rating'] == 3) {echo "onmouseout='mouseOut3()'";} 
-                      else if ($rs_rt['rating'] == 4) {echo "onmouseout='mouseOut4()'";} 
-                    }
-                    
-                  ?>  
+                    <?php 
+                      if(isset($rs_rt['rating'])){
+                        if($rs_rt['rating']==1){echo 'star_color';}
+                        else if($rs_rt['rating']==2){echo 'star_color';}
+                        else if($rs_rt['rating']==3){echo 'star_color';}
+                        else if($rs_rt['rating']==4){echo 'star_color';}
+                        else if($rs_rt['rating']==5){echo 'star_color';}
+                      } 
+                    ?>
+                    "></span></button>
+                  <button data-toggle="modal" data-target="#dialog2" onclick="getRating2(<?php echo $rs_prod['id_product'] ?>)" id="2_<?php echo $rs_prod['id_product'] ?>" value='2' class="btn btn_rt"><span id="clr_2" onmouseover="mouseOver2()" 
+                    <?php 
+                      if (!isset($rs_rt['rating'])) { echo "onmouseout='mouseOut()'";}else{
+                        if ($rs_rt['rating'] == 1) {echo "onmouseout='mouseOut1()'";} 
+                        else if ($rs_rt['rating'] == 2) {echo "onmouseout='mouseOut2()'";} 
+                      }
+                      
+                    ?> 
+                    class="glyphicon glyphicon-star 
+                    <?php 
+                      if(isset($rs_rt['rating'])){
+                        if($rs_rt['rating']==2){echo 'star_color';}
+                        else if($rs_rt['rating']==3){echo 'star_color';}
+                        else if($rs_rt['rating']==4){echo 'star_color';}
+                        else if($rs_rt['rating']==5){echo 'star_color';}
+                      } 
+                    ?>
+                    "></span></button>
+                  <button data-toggle="modal" data-target="#dialog2" onclick="getRating3(<?php echo $rs_prod['id_product'] ?>)" id="3_<?php echo $rs_prod['id_product'] ?>" value='3' class="btn btn_rt"><span id="clr_3" onmouseover="mouseOver3()" 
+                    <?php 
+                      if (!isset($rs_rt['rating'])) { echo "onmouseout='mouseOut()'";}else{
+                        if ($rs_rt['rating'] == 1) {echo "onmouseout='mouseOut1()'";} 
+                        else if ($rs_rt['rating'] == 2) {echo "onmouseout='mouseOut2()'";} 
+                        else if ($rs_rt['rating'] == 3) {echo "onmouseout='mouseOut3()'";} 
+                      }
+                      
+                    ?> 
                   class="glyphicon glyphicon-star 
-                  <?php 
-                    if(isset($rs_rt['rating'])){
-                      if($rs_rt['rating']==4){echo 'star_color';}
-                      else if($rs_rt['rating']==5){echo 'star_color';}
-                    } 
-                  ?>
-                  "></span></button>
-                <button data-toggle="modal" data-target="#dialog2" onclick="getRating5(<?php echo $rs_prod['id_product'] ?>)" id="5_<?php echo $rs_prod['id_product'] ?>" value='5' class="btn btn_rt"><span id="clr_5" onmouseover="mouseOver5()" 
-                  <?php 
-                    if (!isset($rs_rt['rating'])) { echo "onmouseout='mouseOut()'";}else{
-                      if ($rs_rt['rating'] == 1) {echo "onmouseout='mouseOut1()'";} 
-                      else if ($rs_rt['rating'] == 2) {echo "onmouseout='mouseOut2()'";} 
-                      else if ($rs_rt['rating'] == 3) {echo "onmouseout='mouseOut3()'";} 
-                      else if ($rs_rt['rating'] == 4) {echo "onmouseout='mouseOut4()'";} 
-                    }
-                    
-                  ?> 
-                  class="glyphicon glyphicon-star 
-                  <?php 
-                    if(isset($rs_rt['rating'])){
-                      if($rs_rt['rating']==5){echo 'star_color';}
-                    } 
-                  ?>
-                  "></span></button>
-                
+                    <?php 
+                      if(isset($rs_rt['rating'])){
+                        if($rs_rt['rating']==3){echo 'star_color';}
+                        else if($rs_rt['rating']==4){echo 'star_color';}
+                        else if($rs_rt['rating']==5){echo 'star_color';}
+                      } 
+                    ?>
+                    "></span></button>
+                  <button data-toggle="modal" data-target="#dialog2" onclick="getRating4(<?php echo $rs_prod['id_product'] ?>)" id="4_<?php echo $rs_prod['id_product'] ?>" value='4' class="btn btn_rt"><span id="clr_4" onmouseover="mouseOver4()" 
+                    <?php 
+                      if (!isset($rs_rt['rating'])) { echo "onmouseout='mouseOut()'";}else{
+                        if ($rs_rt['rating'] == 1) {echo "onmouseout='mouseOut1()'";} 
+                        else if ($rs_rt['rating'] == 2) {echo "onmouseout='mouseOut2()'";} 
+                        else if ($rs_rt['rating'] == 3) {echo "onmouseout='mouseOut3()'";} 
+                        else if ($rs_rt['rating'] == 4) {echo "onmouseout='mouseOut4()'";} 
+                      }
+                      
+                    ?>  
+                    class="glyphicon glyphicon-star 
+                    <?php 
+                      if(isset($rs_rt['rating'])){
+                        if($rs_rt['rating']==4){echo 'star_color';}
+                        else if($rs_rt['rating']==5){echo 'star_color';}
+                      } 
+                    ?>
+                    "></span></button>
+                  <button data-toggle="modal" data-target="#dialog2" onclick="getRating5(<?php echo $rs_prod['id_product'] ?>)" id="5_<?php echo $rs_prod['id_product'] ?>" value='5' class="btn btn_rt"><span id="clr_5" onmouseover="mouseOver5()" 
+                    <?php 
+                      if (!isset($rs_rt['rating'])) { echo "onmouseout='mouseOut()'";}else{
+                        if ($rs_rt['rating'] == 1) {echo "onmouseout='mouseOut1()'";} 
+                        else if ($rs_rt['rating'] == 2) {echo "onmouseout='mouseOut2()'";} 
+                        else if ($rs_rt['rating'] == 3) {echo "onmouseout='mouseOut3()'";} 
+                        else if ($rs_rt['rating'] == 4) {echo "onmouseout='mouseOut4()'";} 
+                      }
+                      
+                    ?> 
+                    class="glyphicon glyphicon-star 
+                    <?php 
+                      if(isset($rs_rt['rating'])){
+                        if($rs_rt['rating']==5){echo 'star_color';}
+                      } 
+                    ?>
+                    "></span></button>
+                  
+              <br><strong>Đánh giá trung bình: 
+                <?php
+                if (!isset($rs_rt_prod)) {
+                }else{
+                  $sum = 0;
+                foreach ($rs_rt_prod as $key => $value) {
+                  $sum += $value['rating'];
+                  } 
+                }
+                if (isset($sum)){
+                  if (count($rs_rt_prod)>0) {
+                    $tb =(float) ($sum / count($rs_rt_prod)); 
+                    echo ROUND($tb,1);
+                  }else{
+                    $tb = 0;
+                    echo $tb;
+                  }  
+               } ?></strong><span style="padding-left:5px;color: #2ac37d;" class="glyphicon glyphicon-star"></span>    
+              </div>
             </div>
-          </div>
           </div>
           <h1><?php echo $rs_prod['product_name'] ?></h1>
           <p class="ps-product__category"><a href="#"> <?php echo $rs_prod['cate_name'] ?></a>
@@ -301,7 +319,7 @@
                       }
                    ?>
                   
-                  <p><a> <?php echo $value['display_name'] ?> </a><?php echo $value['day_create'] ?>
+                  <p><a> <?php echo $value['display_name'] ?> </a><?php echo date("H:i:s - d/m/Y",strtotime($value['day_create']));?>
                 </header>
                 <p><?php echo $value['rating_proc'] ?></p>
               </div>
@@ -310,17 +328,6 @@
                   }
                 }
              ?>
-             <p class="mb-20"><strong>Đánh giá trung bình: 
-              <?php 
-              if (isset($sum)){
-                if (count($rs_rt_prod)>0) {
-                  $tb =(float) ($sum / count($rs_rt_prod)); 
-                  echo ROUND($tb,1);
-                }else{
-                  $tb = 0;
-                  echo $tb;
-                }  
-             } ?></strong><span style="padding-left:5px;color: #2ac37d;" class="glyphicon glyphicon-star"></span></p>
           </div>
           </div>
         </div>
@@ -382,7 +389,7 @@
                       
 
                   </div>
-                  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#"><?php echo $value['product_name'] ?></a>
+                  <div class="ps-shoe__detail"><a class="ps-shoe__name" href="index.php?page=product-detail&id=<?php echo $value['id_product'] ?>"><?php echo $value['product_name'] ?></a>
                     <p >
                       <del><?php
                         if ($value['percent'] > 0) {echo number_format($value['price']).' đ';}?></del>

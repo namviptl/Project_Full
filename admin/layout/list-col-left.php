@@ -23,7 +23,7 @@
       <div class="menu_section">
 
         <ul class="nav side-menu">
-          <li><a><i class="fa fa-home"></i> Home</a>
+          <li><a href="index.php?page=home"><i class="fa fa-home"></i> Home</a>
           </li>
 
           <li><a href="index.php?page=list-cate&method=list"><i class="fa fa-edit"></i> Quản lý danh mục</a>
@@ -32,21 +32,33 @@
           <li><a><i class="fa fa-edit"></i> Quản lý sản phẩm <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
               <li><a href="index.php?page=list-product&method=list">Danh sách sản phẩm</a></li>
+              <?php if (!isset($_SESSION['nv'])) {
+              ?>
               <li><a href="index.php?page=list-product&method=add">Thêm sản phẩm</a></li>
+              <?php
+              } ?>
             </ul>
           </li>
 
           <li><a><i class="fa fa-edit"></i> Quản lý chi tiết ảnh SP<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="index.php?page=list-img&method=list">Danh sách sản phẩm</a></li>
+              <li><a href="index.php?page=list-img&method=list">Danh sách ảnh SP</a></li>
+              <?php if (!isset($_SESSION['nv'])) {
+              ?>
               <li><a href="index.php?page=list-img&method=add">Thêm ảnh</a></li>
+              <?php
+              } ?>
             </ul>
           </li>
 
           <li><a><i class="fa fa-edit"></i> Quản lý tài khoản <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
               <li><a href="index.php?page=list-account&method=list">Danh sách tài khoản</a></li>
+              <?php if (!isset($_SESSION['nv'])) {
+              ?>
               <li><a href="index.php?page=list-account&method=add">Thêm mới tài khoản</a></li>
+              <?php
+              } ?>
             </ul>
           </li>
 
@@ -59,7 +71,21 @@
           <li><a><i class="fa fa-edit"></i> Quản lý bài viết <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="index.php?page=list-blog&method=list">Danh sách bài viết</a></li>
+                    <?php if (!isset($_SESSION['nv'])) {
+                     ?>
                     <li><a href="index.php?page=list-blog&method=add">Thêm bài viết</a></li>
+                    <?php
+                    } ?>
+                </ul>
+            </li>
+          <li><a><i class="fa fa-edit"></i> Quản lý giảm giá <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="index.php?page=list-discount&method=list">Danh sách mã giảm giá</a></li>
+                    <?php if (!isset($_SESSION['nv'])) {
+                     ?>
+                    <li><a href="index.php?page=list-discount&method=add">Thêm mã giảm giá</a></li>
+                    <?php
+                    } ?>
                 </ul>
             </li>
           

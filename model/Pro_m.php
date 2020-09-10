@@ -22,6 +22,17 @@
 
 			return $pre->fetchAll(PDO::FETCH_ASSOC);
 		}
+		//Đếm số bản ghi tìm thấy
+		public function countSearchPro($keys){
+			$sql = "SELECT id_product FROM tbl_product WHERE product_name like :keys";
+			$pre = $this->pdo->prepare($sql);
+
+			$pre->bindParam(':keys',$keys);
+			$pre->execute();
+
+			return $pre->fetchAll(PDO::FETCH_ASSOC);
+		}
+
 		//phân trang
 		public function pages($from, $row){
 			$sql = "SELECT * FROM tbl_product,tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate ORDER BY tbl_product.id_product DESC LIMIT $from, $row";
@@ -76,7 +87,7 @@
 
 		//Sắp xếp sản phẩm theo giá giảm dần
         public function getProdSortByDESC($cate_name, $from, $row){
-            $sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY tbl_product.price DESC LIMIT $from, $row";
+            $sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY price*(1-percent/100) DESC LIMIT $from, $row";
             $pre = $this->pdo->prepare($sql);
             $pre->bindParam(':cate_name', $cate_name);
             $pre->execute();
@@ -86,7 +97,7 @@
 
         //Sắp xếp sản phẩm theo giá tăng dần
         public function getProdSortByASC($cate_name, $from, $row){
-            $sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY tbl_product.price ASC LIMIT $from, $row";
+            $sql = "SELECT * FROM tbl_product, tbl_category WHERE tbl_product.id_cate = tbl_category.id_cate AND tbl_category.cate_name = :cate_name ORDER BY price*(1-percent/100) ASC LIMIT $from, $row";
             $pre = $this->pdo->prepare($sql);
             $pre->bindParam(':cate_name', $cate_name);
             $pre->execute();

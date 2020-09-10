@@ -30,9 +30,9 @@
 
     <div class="navigation__column right">
       <!-- form tìm kiếm -->
-      <form class="ps-search--header" action="index.php?page=search-product" method="post">
-        <input name="keys" class="form-control" type="text" placeholder="Tìm kiếm sản phẩm">
-        <button type="submit" name="sb_search"><i class="ps-icon-search"></i></button>
+      <form action="index.php?page=search-product&pages=1" method="post">
+        <input class="search" name="keys" class="form-control" type="text" placeholder="Tìm kiếm sản phẩm">
+        <button class="icon_sr" type="submit" name="sb_search"><i class="ps-icon-search"></i></button>
       </form>
       <!-- bắt đầu giỏ hàng -->
       <?php 

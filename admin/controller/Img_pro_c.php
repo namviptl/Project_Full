@@ -103,7 +103,7 @@
 					break;
 				
 				default:
-						$row = 4; // số tin một trang
+						$row = 10; // số tin một trang
 						$number = count($this->img->getNumber()); // Tổng số bản ghi
 						$pagination = ceil($number/$row);
 						

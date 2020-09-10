@@ -28,7 +28,11 @@
 			<th style="width: 200px;" class="text-center">Địa chỉ</th>
 			<th class="text-center">Loại tài khoản</th>
 			<th class="text-center">Điểm</th>
+			<?php if (!isset($_SESSION['nv'])) {
+	     	 ?>
 			<th class="text-center">Chức năng</th>
+			<?php
+	      	} ?>	
 		</tr>
 	</thead>
 	<?php 
@@ -47,7 +51,9 @@
 	      <td><?php echo $value['email'] ?></td>
 	      <td><?php echo $value['addres'] ?></td>
 	      <td><?php echo $value['type'] ?></td>	
-	      <td><?php echo $value['points'] ?></td>	
+	      <td><?php echo $value['points'] ?></td>
+	      <?php if (!isset($_SESSION['nv'])) {
+	      ?>
 	      <td class="text-center">
 			<a href="index.php?page=list-account&method=edit&id=<?php echo $value['id_account'] ?>">
 				<button class="btn btn-dark">Sửa</button>
@@ -56,6 +62,8 @@
 				<button class="btn btn-dark">Xóa</button>
 			</a>
 		  </td>
+		  <?php
+	      } ?>	
 	    </tr>
 	</tbody>
 	<?php

@@ -22,7 +22,10 @@
 			<th class="text-center" width="130px">Ảnh đại diện</th>
 			<th class="text-center">Tên bài viết</th>
 			<th class="text-center" width="120px;">Ngày viết bài</th>
+			<?php if(!isset($_SESSION['nv'])){ ?>
 			<th class="text-center" width="220px;">Chức năng</th>
+			<?php
+  			} ?>
 		</tr>
 	</thead>
 
@@ -37,6 +40,8 @@
 	      <td class="text-center"><img style="width: 100px;height: 100px;" src="images/blog/<?php echo $value['post_avatar']; ?>"></td>
 	      <td><?php echo $value["post_name"] ?></td>
 	      <td class="text-center"><?php echo $value["dateTime"] ?></td>
+	      <?php if (!isset($_SESSION['nv'])) {
+		  ?>
 	      <td class="text-center">
               <a href="index.php?page=list-blog&method=detail&id=<?php echo $value['id_post'] ?>">
                   <button class="btn btn-dark">Xem</button>
@@ -48,6 +53,8 @@
 				<button class="btn btn-dark">Xóa</button>
 			</a>
 		  </td>
+		  <?php
+	      } ?>
 	    </tr>
 	</tbody>
 	<?php

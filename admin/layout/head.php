@@ -19,6 +19,7 @@
     
     <!-- Custom styling plus plugins -->
     <link href="css/custom.min.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
 
     <link href="css/myCSS.css" rel="stylesheet">
 
